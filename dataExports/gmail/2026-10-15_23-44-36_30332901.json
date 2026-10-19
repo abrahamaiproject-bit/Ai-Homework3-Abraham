@@ -1,0 +1,24 @@
+{
+  "service": "gmail",
+  "id": "1a141f4130332901",
+  "title": "Driver app v2 beta feedback",
+  "body": "Hi,\n\nSummary of beta feedback from 25 drivers on the v2 driver mobile app:\n\n- 80% prefer the new turn-by-turn navigation\n- Several reports of the app freezing when switching to offline mode\n- Drivers want a bigger \"Delivered\" button for use with gloves\n\nI've filed the offline-mode crash as an issue in Linear. Let's prioritize it before the wider rollout.\n\nThanks,\nAbraham",
+  "author": "abrahamaiproject@gmail.com",
+  "created": "2026-10-15T23:44:36Z",
+  "updated": "2026-10-15T23:44:36Z",
+  "url": "https://mail.google.com/mail/?authuser=abrahamaiproject@gmail.com#all/thread-f:1879161309362333953",
+  "metadata": {
+    "from": "abrahamaiproject@gmail.com",
+    "to": [
+      "abrahamaiproject@gmail.com"
+    ],
+    "cc": [],
+    "date": "2026-10-15T23:44:36Z",
+    "labels": [
+      "UNREAD",
+      "SENT",
+      "INBOX"
+    ],
+    "threadId": "1a141f4130332901"
+  }
+}

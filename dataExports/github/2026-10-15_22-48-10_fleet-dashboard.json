@@ -1,0 +1,17 @@
+{
+  "service": "github",
+  "id": "1421401264",
+  "title": "abrahamaiproject-bit/fleet-dashboard",
+  "body": "# fleet-dashboard\n\nNext.js web dashboard where fleet managers view live vehicle locations, route plans, and on-time delivery KPIs.\n\n## Running locally\n```bash\npnpm install\npnpm dev\n```\n\n## Contact\nQuestions about the dashboard roadmap go to Joe Smith.\n",
+  "author": "abrahamaiproject-bit",
+  "created": "2026-10-15T22:48:10Z",
+  "updated": "2026-10-15T22:49:00Z",
+  "url": "https://github.com/abrahamaiproject-bit/fleet-dashboard",
+  "metadata": {
+    "description": "Web dashboard for fleet managers",
+    "language": null,
+    "visibility": "private",
+    "default_branch": "main",
+    "readme": "# fleet-dashboard\n\nNext.js web dashboard where fleet managers view live vehicle locations, route plans, and on-time delivery KPIs.\n\n## Running locally\n```bash\npnpm install\npnpm dev\n```\n\n## Contact\nQuestions about the dashboard roadmap go to Joe Smith.\n"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "service": "notion",
+  "id": "3fa6f755-57f6-817e-839a-c0a9543dd1bb",
+  "title": "Q4 2026 OKRs",
+  "body": "## Objective 1: Grow revenue\n- KR: $30k MRR\n- KR: 10 paying fleets\n## Objective 2: Ship the Project Atlas beta\n- KR: Harbor Logistics pilot hits its success criteria\n- KR: p95 latency under 250ms\n## Objective 3: Reliability\n- KR: 99.9% dispatch uptime",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T22:49:00.000Z",
+  "updated": "2026-10-15T22:49:16.477Z",
+  "url": "https://app.notion.com/p/3fa6f75557f6817e839ac0a9543dd1bb",
+  "metadata": {
+    "parent": {
+      "type": "workspace",
+      "name": "Abraham AIProject’s Space"
+    },
+    "properties": {
+      "title": "Q4 2026 OKRs"
+    },
+    "icon": "🎯"
+  }
+}

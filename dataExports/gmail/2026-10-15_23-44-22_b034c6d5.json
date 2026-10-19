@@ -1,0 +1,24 @@
+{
+  "service": "gmail",
+  "id": "1a141f3db034c6d5",
+  "title": "Joe Smith joining as Head of Platform",
+  "body": "Hi all,\n\nExcited to share that Joe Smith is joining Lumen Freight as Head of Platform starting Monday. Joe previously led infrastructure at a logistics company and will oversee our API gateway, telemetry pipeline, and on-call rotation.\n\nPlease make him feel welcome and add him to the #platform channel and the eng-handbook repo.\n\nBest,\nAbraham",
+  "author": "abrahamaiproject@gmail.com",
+  "created": "2026-10-15T23:44:22Z",
+  "updated": "2026-10-15T23:44:22Z",
+  "url": "https://mail.google.com/mail/?authuser=abrahamaiproject@gmail.com#all/thread-f:1879161294330054357",
+  "metadata": {
+    "from": "abrahamaiproject@gmail.com",
+    "to": [
+      "abrahamaiproject@gmail.com"
+    ],
+    "cc": [],
+    "date": "2026-10-15T23:44:22Z",
+    "labels": [
+      "UNREAD",
+      "SENT",
+      "INBOX"
+    ],
+    "threadId": "1a141f3db034c6d5"
+  }
+}

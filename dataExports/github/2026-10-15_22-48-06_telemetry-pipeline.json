@@ -1,0 +1,17 @@
+{
+  "service": "github",
+  "id": "1421401222",
+  "title": "abrahamaiproject-bit/telemetry-pipeline",
+  "body": "# telemetry-pipeline\n\nIngests GPS pings from fleet vehicles (about 2M events per day) through Kinesis, then Flink, into S3 and ClickHouse.\n\nThe output feeds traffic predictions for **Project Atlas**.\n\n## Components\n- `ingest/`: Kinesis consumers\n- `transform/`: Flink jobs for map-matching and speed aggregation\n- `sink/`: ClickHouse writers\n",
+  "author": "abrahamaiproject-bit",
+  "created": "2026-10-15T22:48:06Z",
+  "updated": "2026-10-15T22:48:58Z",
+  "url": "https://github.com/abrahamaiproject-bit/telemetry-pipeline",
+  "metadata": {
+    "description": "Vehicle GPS telemetry ingestion pipeline",
+    "language": null,
+    "visibility": "private",
+    "default_branch": "main",
+    "readme": "# telemetry-pipeline\n\nIngests GPS pings from fleet vehicles (about 2M events per day) through Kinesis, then Flink, into S3 and ClickHouse.\n\nThe output feeds traffic predictions for **Project Atlas**.\n\n## Components\n- `ingest/`: Kinesis consumers\n- `transform/`: Flink jobs for map-matching and speed aggregation\n- `sink/`: ClickHouse writers\n"
+  }
+}

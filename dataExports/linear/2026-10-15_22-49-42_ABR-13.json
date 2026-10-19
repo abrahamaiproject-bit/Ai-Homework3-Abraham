@@ -1,0 +1,19 @@
+{
+  "service": "linear",
+  "id": "ABR-13",
+  "title": "Tag all AWS resources with team and environment",
+  "body": "Enforce tags through a Terraform validation rule in infra-terraform.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T22:49:42.121Z",
+  "updated": "2026-10-15T22:49:42.121Z",
+  "url": "https://linear.app/abraham-gabay/issue/ABR-13/tag-all-aws-resources-with-team-and-environment",
+  "metadata": {
+    "identifier": "ABR-13",
+    "status": "Backlog",
+    "priority": "Low",
+    "assignee": null,
+    "labels": [],
+    "team": "Abraham Gabay",
+    "project": null
+  }
+}

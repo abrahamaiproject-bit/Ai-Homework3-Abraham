@@ -1,0 +1,24 @@
+{
+  "service": "gmail",
+  "id": "1a141f42280ee18a",
+  "title": "Annual plan pricing proposal",
+  "body": "Hi,\n\nProposal for the new annual plan:\n\n- Starter: $49 per truck/month, billed annually\n- Growth: $39 per truck/month for 50+ trucks\n- Enterprise: custom pricing\n\nThis would replace month-to-month pricing for new customers starting January. Details are in the Notion \"Pricing Strategy\" page. Feedback welcome by Friday.\n\nThanks,\nAbraham",
+  "author": "abrahamaiproject@gmail.com",
+  "created": "2026-10-15T23:44:41Z",
+  "updated": "2026-10-15T23:44:41Z",
+  "url": "https://mail.google.com/mail/?authuser=abrahamaiproject@gmail.com#all/thread-f:1879161313520705930",
+  "metadata": {
+    "from": "abrahamaiproject@gmail.com",
+    "to": [
+      "abrahamaiproject@gmail.com"
+    ],
+    "cc": [],
+    "date": "2026-10-15T23:44:41Z",
+    "labels": [
+      "UNREAD",
+      "SENT",
+      "INBOX"
+    ],
+    "threadId": "1a141f42280ee18a"
+  }
+}

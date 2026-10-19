@@ -1,0 +1,20 @@
+{
+  "service": "notion",
+  "id": "3fa6f755-57f6-810e-86b7-c3e3a91eec5f",
+  "title": "Harbor Logistics Pilot Plan",
+  "body": "## Scope\n45 trucks at the Newark and Philadelphia depots, running for 90 days starting November 3.\n## Success criteria\n- 8% reduction in miles driven\n- 95% on-time delivery\nThe pilot runs on Project Atlas. Joe Smith is the technical point of contact.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T22:49:00.000Z",
+  "updated": "2026-10-15T22:49:16.477Z",
+  "url": "https://app.notion.com/p/3fa6f75557f6810e86b7c3e3a91eec5f",
+  "metadata": {
+    "parent": {
+      "type": "workspace",
+      "name": "Abraham AIProject’s Space"
+    },
+    "properties": {
+      "title": "Harbor Logistics Pilot Plan"
+    },
+    "icon": "🚚"
+  }
+}

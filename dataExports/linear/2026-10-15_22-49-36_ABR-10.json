@@ -1,0 +1,19 @@
+{
+  "service": "linear",
+  "id": "ABR-10",
+  "title": "Driver app v2: offline mode",
+  "body": "Cache the stop list and queue proof-of-delivery uploads when there is no signal. Sync when the device reconnects.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T22:49:36.682Z",
+  "updated": "2026-10-15T22:49:36.682Z",
+  "url": "https://linear.app/abraham-gabay/issue/ABR-10/driver-app-v2-offline-mode",
+  "metadata": {
+    "identifier": "ABR-10",
+    "status": "Backlog",
+    "priority": "Medium",
+    "assignee": null,
+    "labels": [],
+    "team": "Abraham Gabay",
+    "project": null
+  }
+}

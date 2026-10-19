@@ -1,0 +1,17 @@
+{
+  "service": "github",
+  "id": "1421401129",
+  "title": "abrahamaiproject-bit/atlas-api-gateway",
+  "body": "# atlas-api-gateway\n\nPublic REST gateway for **Project Atlas**. It handles auth, rate limiting, and request routing to the routing engine.\n\n## Endpoints\n| Method | Path | Description |\n|--------|------|-------------|\n| POST | `/v1/routes/optimize` | Submit stops and get optimized routes |\n| GET | `/v1/routes/{id}` | Fetch a computed route |\n| GET | `/healthz` | Health check |\n\n## Performance target\np95 latency under 250ms (currently 310ms; see the benchmarks from Joe Smith).\n",
+  "author": "abrahamaiproject-bit",
+  "created": "2026-10-15T22:47:59Z",
+  "updated": "2026-10-15T22:48:56Z",
+  "url": "https://github.com/abrahamaiproject-bit/atlas-api-gateway",
+  "metadata": {
+    "description": "Public REST gateway for Project Atlas",
+    "language": null,
+    "visibility": "private",
+    "default_branch": "main",
+    "readme": "# atlas-api-gateway\n\nPublic REST gateway for **Project Atlas**. It handles auth, rate limiting, and request routing to the routing engine.\n\n## Endpoints\n| Method | Path | Description |\n|--------|------|-------------|\n| POST | `/v1/routes/optimize` | Submit stops and get optimized routes |\n| GET | `/v1/routes/{id}` | Fetch a computed route |\n| GET | `/healthz` | Health check |\n\n## Performance target\np95 latency under 250ms (currently 310ms; see the benchmarks from Joe Smith).\n"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "service": "github",
+  "id": "1421401171",
+  "title": "abrahamaiproject-bit/driver-mobile-app",
+  "body": "# driver-mobile-app\n\nReact Native app that Lumen Freight drivers use to view their stop list, navigate, and capture proof of delivery.\n\n## v2 features (in progress)\n- Swipe-to-complete stop list\n- Offline mode\n- Proof-of-delivery photo capture\n\n## Development\n```bash\nnpm install\nnpx expo start\n```\n",
+  "author": "abrahamaiproject-bit",
+  "created": "2026-10-15T22:48:03Z",
+  "updated": "2026-10-15T22:48:57Z",
+  "url": "https://github.com/abrahamaiproject-bit/driver-mobile-app",
+  "metadata": {
+    "description": "Lumen Freight driver app (React Native)",
+    "language": null,
+    "visibility": "private",
+    "default_branch": "main",
+    "readme": "# driver-mobile-app\n\nReact Native app that Lumen Freight drivers use to view their stop list, navigate, and capture proof of delivery.\n\n## v2 features (in progress)\n- Swipe-to-complete stop list\n- Offline mode\n- Proof-of-delivery photo capture\n\n## Development\n```bash\nnpm install\nnpx expo start\n```\n"
+  }
+}

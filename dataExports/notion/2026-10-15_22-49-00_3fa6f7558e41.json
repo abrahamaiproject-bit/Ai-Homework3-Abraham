@@ -1,0 +1,20 @@
+{
+  "service": "notion",
+  "id": "3fa6f755-57f6-8157-a6f6-dd03ab928e41",
+  "title": "Project Atlas – Kickoff Brief",
+  "body": "## Overview\nProject Atlas is Lumen Freight's next-generation route-optimization platform. Target: January beta.\n## Lead\nJoe Smith (VP of Engineering)\n## Goals\n- Cut fleet miles driven by 8%+\n- p95 routing latency under 250ms\n- Launch a pilot with Harbor Logistics (45 trucks)",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T22:49:00.000Z",
+  "updated": "2026-10-15T22:49:16.477Z",
+  "url": "https://app.notion.com/p/3fa6f75557f68157a6f6dd03ab928e41",
+  "metadata": {
+    "parent": {
+      "type": "workspace",
+      "name": "Abraham AIProject’s Space"
+    },
+    "properties": {
+      "title": "Project Atlas – Kickoff Brief"
+    },
+    "icon": "🧭"
+  }
+}

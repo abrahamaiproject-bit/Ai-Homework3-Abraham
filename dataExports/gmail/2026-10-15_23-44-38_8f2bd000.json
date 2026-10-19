@@ -1,0 +1,24 @@
+{
+  "service": "gmail",
+  "id": "1a141f418f2bd000",
+  "title": "AWS cost review for October",
+  "body": "Hi,\n\nOur AWS bill for October came in at $18,400, up 22% from September. The main drivers:\n\n- Telemetry pipeline storage (+$2,100)\n- Unused staging instances left running (+$900)\n\nAction items: set lifecycle rules on the telemetry bucket and shut down idle staging environments. Changes go in the infra-terraform repo.\n\nThanks,\nAbraham",
+  "author": "abrahamaiproject@gmail.com",
+  "created": "2026-10-15T23:44:38Z",
+  "updated": "2026-10-15T23:44:38Z",
+  "url": "https://mail.google.com/mail/?authuser=abrahamaiproject@gmail.com#all/thread-f:1879161310955687936",
+  "metadata": {
+    "from": "abrahamaiproject@gmail.com",
+    "to": [
+      "abrahamaiproject@gmail.com"
+    ],
+    "cc": [],
+    "date": "2026-10-15T23:44:38Z",
+    "labels": [
+      "UNREAD",
+      "SENT",
+      "INBOX"
+    ],
+    "threadId": "1a141f418f2bd000"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "service": "linear",
+  "id": "ABR-11",
+  "title": "Driver app v2: proof-of-delivery photo capture",
+  "body": "Capture a photo at each stop, compress it to under 300KB, and upload it to S3 with stop metadata.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T22:49:38.141Z",
+  "updated": "2026-10-15T22:49:38.141Z",
+  "url": "https://linear.app/abraham-gabay/issue/ABR-11/driver-app-v2-proof-of-delivery-photo-capture",
+  "metadata": {
+    "identifier": "ABR-11",
+    "status": "Backlog",
+    "priority": "Medium",
+    "assignee": null,
+    "labels": [],
+    "team": "Abraham Gabay",
+    "project": null
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "service": "github",
+  "id": "1421401084",
+  "title": "abrahamaiproject-bit/atlas-routing-engine",
+  "body": "# atlas-routing-engine\n\nCore route-optimization engine for **Project Atlas**, Lumen Freight's next-generation routing platform.\n\nIt solves capacitated vehicle routing problems with time windows (CVRPTW) for fleets of up to 500 vehicles.\n\n## Maintainers\n- Joe Smith (VP of Engineering), tech lead\n\n## Getting started\n```bash\nmake install\nmake test\nmake run\n```\n\n## Roadmap\n- [x] Time-window constraints\n- [ ] Live traffic re-optimization\n- [ ] Multi-depot support for the Harbor Logistics pilot\n",
+  "author": "abrahamaiproject-bit",
+  "created": "2026-10-15T22:47:56Z",
+  "updated": "2026-10-15T22:48:54Z",
+  "url": "https://github.com/abrahamaiproject-bit/atlas-routing-engine",
+  "metadata": {
+    "description": "Project Atlas core route-optimization engine (Lumen Freight)",
+    "language": null,
+    "visibility": "private",
+    "default_branch": "main",
+    "readme": "# atlas-routing-engine\n\nCore route-optimization engine for **Project Atlas**, Lumen Freight's next-generation routing platform.\n\nIt solves capacitated vehicle routing problems with time windows (CVRPTW) for fleets of up to 500 vehicles.\n\n## Maintainers\n- Joe Smith (VP of Engineering), tech lead\n\n## Getting started\n```bash\nmake install\nmake test\nmake run\n```\n\n## Roadmap\n- [x] Time-window constraints\n- [ ] Live traffic re-optimization\n- [ ] Multi-depot support for the Harbor Logistics pilot\n"
+  }
+}

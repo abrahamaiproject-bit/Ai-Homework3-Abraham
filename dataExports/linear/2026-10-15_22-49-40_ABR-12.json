@@ -1,0 +1,19 @@
+{
+  "service": "linear",
+  "id": "ABR-12",
+  "title": "[Project Atlas] Live traffic re-optimization",
+  "body": "Use speed features from telemetry-pipeline to re-plan routes mid-day when delays exceed 15 minutes. Design review with Joe Smith needed before implementation.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T22:49:40.963Z",
+  "updated": "2026-10-15T22:49:40.963Z",
+  "url": "https://linear.app/abraham-gabay/issue/ABR-12/project-atlas-live-traffic-re-optimization",
+  "metadata": {
+    "identifier": "ABR-12",
+    "status": "Backlog",
+    "priority": "Medium",
+    "assignee": null,
+    "labels": [],
+    "team": "Abraham Gabay",
+    "project": null
+  }
+}

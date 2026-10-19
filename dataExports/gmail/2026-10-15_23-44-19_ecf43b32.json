@@ -1,0 +1,24 @@
+{
+  "service": "gmail",
+  "id": "1a141f3cecf43b32",
+  "title": "Project Atlas kickoff recap",
+  "body": "Hi team,\n\nThanks for joining the Project Atlas kickoff today. Quick recap:\n\n- Goal: launch the new route-optimization engine for Lumen Freight by end of Q1.\n- Joe Smith will own the backend architecture and the atlas-routing-engine repo.\n- First milestone: working prototype of the dispatch API in 3 weeks.\n- Weekly sync moves to Tuesdays at 10am.\n\nNotes and the kickoff brief are in Notion under \"Project Atlas - Kickoff Brief\".\n\nThanks,\nAbraham",
+  "author": "abrahamaiproject@gmail.com",
+  "created": "2026-10-15T23:44:19Z",
+  "updated": "2026-10-15T23:44:19Z",
+  "url": "https://mail.google.com/mail/?authuser=abrahamaiproject@gmail.com#all/thread-f:1879161291054267186",
+  "metadata": {
+    "from": "abrahamaiproject@gmail.com",
+    "to": [
+      "abrahamaiproject@gmail.com"
+    ],
+    "cc": [],
+    "date": "2026-10-15T23:44:19Z",
+    "labels": [
+      "UNREAD",
+      "SENT",
+      "INBOX"
+    ],
+    "threadId": "1a141f3cecf43b32"
+  }
+}

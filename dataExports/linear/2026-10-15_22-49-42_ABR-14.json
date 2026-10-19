@@ -1,0 +1,19 @@
+{
+  "service": "linear",
+  "id": "ABR-14",
+  "title": "Billing: annual plan discount",
+  "body": "Add annual billing to Stripe at a 15% or 20% discount (pending the pricing decision).",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T22:49:42.703Z",
+  "updated": "2026-10-15T22:49:42.703Z",
+  "url": "https://linear.app/abraham-gabay/issue/ABR-14/billing-annual-plan-discount",
+  "metadata": {
+    "identifier": "ABR-14",
+    "status": "Backlog",
+    "priority": "Low",
+    "assignee": null,
+    "labels": [],
+    "team": "Abraham Gabay",
+    "project": null
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "service": "notion",
+  "id": "3fa6f755-57f6-81e8-a872-fbfa47b95736",
+  "title": "Weekly Eng Sync – Oct 13",
+  "body": "## Attendees\nJoe Smith, Abraham, backend team\n## Notes\n- Geocoder cache deployed; latency down to 310ms\n- Dispatch outage postmortem reviewed\n- Driver app v2 designs ready for review\n## Action items\n- [ ] Joe Smith: add certificate expiry monitoring\n- [ ] Profile the geocoding step",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T22:49:00.000Z",
+  "updated": "2026-10-15T22:49:16.477Z",
+  "url": "https://app.notion.com/p/3fa6f75557f681e8a872fbfa47b95736",
+  "metadata": {
+    "parent": {
+      "type": "workspace",
+      "name": "Abraham AIProject’s Space"
+    },
+    "properties": {
+      "title": "Weekly Eng Sync – Oct 13"
+    },
+    "icon": "📝"
+  }
+}
