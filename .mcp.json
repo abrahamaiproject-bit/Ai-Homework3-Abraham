@@ -11,14 +11,6 @@
       "type": "http",
       "url": "https://mcp.notion.com/mcp"
     },
-    "gmail": {
-      "type": "http",
-      "url": "https://gmailmcp.googleapis.com/mcp/v1",
-      "oauth": {
-        "clientId": "419209657434-snebt5j3djcqth3ojtjr6hevvvbf8dha.apps.googleusercontent.com",
-        "callbackPort": 8765
-      }
-    },
     "linear": {
       "type": "http",
       "url": "https://mcp.linear.app/mcp"
