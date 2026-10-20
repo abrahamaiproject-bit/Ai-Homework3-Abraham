@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Exports Dashboard</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #fff; --text: #1d2330; --muted: #667085; --border: #e3e6eb;
+    --accent: #3b5bdb; --mark: #ffe066;
+    --gmail: #d93025; --github: #24292f; --notion: #6b5b4b; --linear: #5e6ad2;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); }
+  header { position: sticky; top: 0; z-index: 5; background: var(--card); border-bottom: 1px solid var(--border); padding: 16px; }
+  .wrap { max-width: 960px; margin: 0 auto; }
+  h1 { margin: 0 0 12px; font-size: 20px; }
+  #q { width: 100%; padding: 10px 14px; font-size: 16px; border: 1px solid var(--border); border-radius: 8px; }
+  #q:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .filters button { border: 1px solid var(--border); background: var(--card); padding: 6px 12px; border-radius: 999px; cursor: pointer; font-size: 14px; }
+  .filters button.active { background: var(--text); color: #fff; border-color: var(--text); }
+  .filters .count { opacity: .65; margin-left: 4px; }
+  main { padding: 16px; }
+  #status { color: var(--muted); margin-bottom: 12px; }
+  .result { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; cursor: pointer; }
+  .result:hover { border-color: var(--accent); }
+  .row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .badge { color: #fff; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 4px; text-transform: capitalize; }
+  .badge.gmail { background: var(--gmail); } .badge.github { background: var(--github); }
+  .badge.notion { background: var(--notion); } .badge.linear { background: var(--linear); }
+  .title { font-weight: 600; font-size: 16px; margin: 6px 0 4px; overflow-wrap: anywhere; }
+  .date { color: var(--muted); font-size: 13px; }
+  .snippet { color: #3d4555; font-size: 14px; overflow-wrap: anywhere; }
+  .where { color: var(--muted); font-size: 12px; font-style: italic; }
+  a.open { margin-left: auto; font-size: 13px; color: var(--accent); text-decoration: none; }
+  a.open:hover { text-decoration: underline; }
+  mark { background: var(--mark); color: inherit; padding: 0 1px; border-radius: 2px; }
+  /* detail view */
+  #overlay { position: fixed; inset: 0; background: rgba(0,0,0,.45); display: none; z-index: 10; padding: 24px 16px; overflow-y: auto; }
+  #overlay.show { display: block; }
+  #detail { background: var(--card); max-width: 860px; margin: 0 auto; border-radius: 12px; padding: 20px 24px; position: relative; }
+  #close { position: absolute; top: 12px; right: 14px; border: 0; background: none; font-size: 24px; cursor: pointer; color: var(--muted); }
+  #detail h2 { margin: 10px 0 4px; font-size: 20px; padding-right: 30px; overflow-wrap: anywhere; }
+  #detail .body { white-space: pre-wrap; overflow-wrap: anywhere; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 14px; font-size: 14px; margin: 14px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  td { border-top: 1px solid var(--border); padding: 6px 8px; vertical-align: top; overflow-wrap: anywhere; }
+  td:first-child { color: var(--muted); width: 160px; white-space: nowrap; }
+  h3 { font-size: 14px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 18px 0 6px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Data Exports Dashboard</h1>
+    <input id="q" type="search" placeholder="Search titles, bodies and metadata across all services…" autofocus>
+    <div class="filters" id="filters"></div>
+  </div>
+</header>
+<main class="wrap">
+  <div id="status">Loading…</div>
+  <div id="results"></div>
+</main>
+<div id="overlay"><div id="detail"></div></div>
+
+<script>
+const SERVICES = ["gmail", "github", "notion", "linear"];
+const LABELS = { all: "All", gmail: "Gmail", github: "GitHub", notion: "Notion", linear: "Linear" };
+let items = [];
+let service = "all";
+let current = [];
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const safeUrl = (u) => /^https?:\/\//i.test(u || "") ? u : null;
+const terms = () => $("q").value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+const reEsc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+// Escape text and wrap every occurrence of the search terms in <mark>.
+function highlight(text, ts) {
+  text = String(text ?? "");
+  if (!ts.length) return esc(text);
+  const re = new RegExp(ts.map(reEsc).sort((a, b) => b.length - a.length).join("|"), "gi");
+  let out = "", last = 0, m;
+  while ((m = re.exec(text))) {
+    out += esc(text.slice(last, m.index)) + "<mark>" + esc(m[0]) + "</mark>";
+    last = m.index + m[0].length;
+  }
+  return out + esc(text.slice(last));
+}
+
+// Flatten metadata into "key: value" lines so it can be searched and shown.
+function flatten(obj, prefix = "") {
+  const lines = [];
+  for (const [k, v] of Object.entries(obj || {})) {
+    const key = prefix ? `${prefix}.${k}` : k;
+    if (v && typeof v === "object" && !Array.isArray(v)) lines.push(...flatten(v, key));
+    else lines.push(`${key}: ${Array.isArray(v) ? v.join(", ") : v ?? "—"}`);
+  }
+  return lines;
+}
+
+function fmtDate(iso) {
+  const d = new Date(iso);
+  return isNaN(d) ? "" : d.toLocaleString(undefined, { year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" });
+}
+
+function snippetFrom(text, ts, len = 220) {
+  const clean = String(text || "").replace(/\s+/g, " ").trim();
+  const lower = clean.toLowerCase();
+  let pos = -1;
+  for (const t of ts) { const i = lower.indexOf(t); if (i >= 0 && (pos < 0 || i < pos)) pos = i; }
+  const start = pos > 60 ? pos - 60 : 0;
+  let s = clean.slice(start, start + len);
+  return (start > 0 ? "…" : "") + highlight(s, ts) + (start + len < clean.length ? "…" : "");
+}
+
+function buildSnippet(item, ts) {
+  const body = item.body || "";
+  if (!ts.length || ts.some((t) => body.toLowerCase().includes(t)) || !item._meta.toLowerCase().includes(ts[0]))
+    return body.trim() ? `<div class="snippet">${snippetFrom(body, ts)}</div>` : `<div class="snippet where">(no body text)</div>`;
+  // Matched only in metadata: show the matching metadata lines.
+  const hits = item._metaLines.filter((l) => ts.some((t) => l.toLowerCase().includes(t))).slice(0, 3);
+  return `<div class="where">Matched in metadata</div><div class="snippet">${hits.map((l) => highlight(l, ts)).join(" · ")}</div>`;
+}
+
+function render() {
+  const ts = terms();
+  current = items.filter((it) =>
+    (service === "all" || it.service === service) && ts.every((t) => it._hay.includes(t)));
+
+  // Per-service counts reflect the current search.
+  const matching = items.filter((it) => ts.every((t) => it._hay.includes(t)));
+  $("filters").innerHTML = ["all", ...SERVICES].map((s) => {
+    const n = s === "all" ? matching.length : matching.filter((i) => i.service === s).length;
+    return `<button data-s="${s}" class="${s === service ? "active" : ""}">${LABELS[s]}<span class="count">${n}</span></button>`;
+  }).join("");
+
+  $("status").textContent = `${current.length} result${current.length === 1 ? "" : "s"}` +
+    (ts.length ? ` for “${$("q").value.trim()}”` : "") + (service !== "all" ? ` in ${LABELS[service]}` : "");
+
+  $("results").innerHTML = current.map((it, i) => {
+    const url = safeUrl(it.url);
+    return `<div class="result" data-i="${i}">
+      <div class="row">
+        <span class="badge ${esc(it.service)}">${esc(LABELS[it.service] || it.service)}</span>
+        <span class="date">${esc(fmtDate(it.created))}</span>
+        ${url ? `<a class="open" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Open in ${esc(LABELS[it.service] || "source")} ↗</a>` : ""}
+      </div>
+      <div class="title">${highlight(it.title || "(untitled)", ts)}</div>
+      ${buildSnippet(it, ts)}
+    </div>`;
+  }).join("");
+}
+
+function showDetail(it) {
+  const ts = terms();
+  const url = safeUrl(it.url);
+  const rows = [
+    ["Author", it.author], ["Created", fmtDate(it.created)], ["Updated", fmtDate(it.updated)],
+    ["ID", it.id], ["File", "dataExports/" + it.file],
+  ];
+  $("detail").innerHTML = `
+    <button id="close" aria-label="Close">×</button>
+    <span class="badge ${esc(it.service)}">${esc(LABELS[it.service] || it.service)}</span>
+    <h2>${highlight(it.title || "(untitled)", ts)}</h2>
+    ${url ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Open original ↗</a>` : ""}
+    <div class="body">${it.body ? highlight(it.body, ts) : "<em>(no body text)</em>"}</div>
+    <h3>Details</h3>
+    <table>${rows.map(([k, v]) => `<tr><td>${k}</td><td>${highlight(v ?? "—", ts)}</td></tr>`).join("")}</table>
+    <h3>Metadata</h3>
+    <table>${it._metaLines.map((l) => {
+      const i = l.indexOf(": ");
+      return `<tr><td>${esc(l.slice(0, i))}</td><td>${highlight(l.slice(i + 2), ts)}</td></tr>`;
+    }).join("")}</table>`;
+  $("overlay").classList.add("show");
+  $("overlay").scrollTop = 0;
+}
+
+function hideDetail() { $("overlay").classList.remove("show"); }
+
+$("q").addEventListener("input", render);
+$("filters").addEventListener("click", (e) => {
+  const b = e.target.closest("button");
+  if (b) { service = b.dataset.s; render(); }
+});
+$("results").addEventListener("click", (e) => {
+  if (e.target.closest("a")) return; // let the external link open normally
+  const r = e.target.closest(".result");
+  if (r) showDetail(current[+r.dataset.i]);
+});
+$("overlay").addEventListener("click", (e) => {
+  if (e.target.id === "overlay" || e.target.id === "close") hideDetail();
+});
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") hideDetail(); });
+
+fetch("/api/items")
+  .then((r) => r.json())
+  .then((data) => {
+    items = data.map((it) => {
+      const metaLines = flatten(it.metadata);
+      const meta = metaLines.join("\n");
+      return { ...it, _metaLines: metaLines, _meta: meta,
+        _hay: [it.title, it.body, meta].join("\n").toLowerCase() };
+    });
+    render();
+  })
+  .catch((err) => { $("status").textContent = "Could not load data: " + err; });
+</script>
+</body>
+</html>
