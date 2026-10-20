@@ -52,6 +52,13 @@ never contacts the live services. You can search title, body and metadata across
 services at once, filter by service, and click any result to see the full item. See
 [`dashboard/README.md`](dashboard/README.md) for details.
 
+## Presentation and demo
+
+| File | What it is |
+|---|---|
+| [`Homework3_Presentation.pptx`](Homework3_Presentation.pptx) | Slide deck presenting the project |
+| [`demo_video.mp4`](demo_video.mp4) | Screen recording demonstrating the project |
+
 ## Data and privacy
 
 All data in this repo is **fictional test data** from throwaway accounts created for this
