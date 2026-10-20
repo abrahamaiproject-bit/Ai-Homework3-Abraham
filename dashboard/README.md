@@ -1,7 +1,7 @@
 # Data Exports Dashboard
 
 A small local website for searching the data exported into `../dataExports/`
-(Gmail, GitHub, Notion and Linear). It only reads the local JSON files — it never
+(Gmail, GitHub, Notion, Linear, Todoist and Jira). It only reads the local JSON files — it never
 connects to the live services.
 
 ## Requirements
@@ -31,7 +31,7 @@ refresh the browser.
 
 - **Search** — one box searches title, body and metadata of every item across all
   services. Multiple words must all match (case-insensitive).
-- **Service filters** — show All, Gmail, GitHub, Notion or Linear. Each button shows
+- **Service filters** — show All, Gmail, GitHub, Notion, Linear, Todoist or Jira. Each button shows
   how many items match the current search.
 - **Results** — each result shows a colored badge with the service name, the title,
   the date, a text snippet with the search terms highlighted, and a link to the

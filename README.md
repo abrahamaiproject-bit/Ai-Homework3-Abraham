@@ -6,10 +6,15 @@ data into local JSON files, and lets you search everything in a small local dash
 
 ## Team and contributions
 
-| Member | Contributions |
-|---|---|
-| _Name_ | _To be filled in_ |
-| _Name_ | _To be filled in_ |
+We are a group of three. We worked together on one shared computer and one set of test accounts, helping each other throughout. Each member owned one extra service, and we split the shared parts of the project between us.
+
+| Member | Extra service | Also responsible for |
+|---|---|---|
+| Abraham Gabay | **Linear** | GitHub repo setup, Gmail, GitHub and Notion MCP connections and test data, demo video |
+| Joel Aserraf | **Todoist** | `localStorageFormats.md` and the export skill (`.claude/skills/export-service-data`) |
+| Marco Foununu | **Jira** | Local dashboard website (`dashboard/`), screenshots and PowerPoint presentation |
+
+For each extra service, the owner connected it to Claude Code through its official MCP server, created the test items, exported them into `dataExports/<service>/` with the skill, added it to the dashboard, and took the "original vs dashboard" screenshots.
 
 ## How each service is connected
 
