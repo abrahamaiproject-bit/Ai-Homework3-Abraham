@@ -1,19 +1,26 @@
 # AI Homework 3 — Claude Code + MCP data exports
 
-A class assignment that connects **Claude Code** to four services — **Gmail, GitHub,
-Notion and Linear** — through MCP (Model Context Protocol) servers, downloads their
+A class assignment that connects **Claude Code** to six services — **Gmail, GitHub,
+Notion, Linear, Todoist and Jira** — through MCP (Model Context Protocol) servers, downloads their
 data into local JSON files, and lets you search everything in a small local dashboard.
 
-I worked on this alone. **Linear** is my extra (fourth) service.
+## Team and contributions
+
+| Member | Contributions |
+|---|---|
+| _Name_ | _To be filled in_ |
+| _Name_ | _To be filled in_ |
 
 ## How each service is connected
 
-| Service | How | Auth |
-|---|---|---|
-| GitHub | `.mcp.json` → GitHub's remote MCP server (`https://api.githubcopilot.com/mcp/`) | Personal access token read from the `GITHUB_PAT` environment variable |
-| Notion | `.mcp.json` → Notion's remote MCP server (`https://mcp.notion.com/mcp`) | OAuth sign-in when first used |
-| Linear | `.mcp.json` → Linear's remote MCP server (`https://mcp.linear.app/mcp`) | OAuth sign-in when first used |
-| Gmail | Google's official Gmail MCP server, through the **claude.ai Gmail connector** | Google sign-in on claude.ai |
+| Service | How | Auth | Items exported |
+|---|---|---|---|
+| GitHub | `.mcp.json` → GitHub's remote MCP server (`https://api.githubcopilot.com/mcp/`) | Personal access token read from the `GITHUB_PAT` environment variable | 11 repositories |
+| Notion | `.mcp.json` → Notion's remote MCP server (`https://mcp.notion.com/mcp`) | OAuth sign-in when first used | 20 pages |
+| Linear | `.mcp.json` → Linear's remote MCP server (`https://mcp.linear.app/mcp`) | OAuth sign-in when first used | 14 issues |
+| Todoist | `.mcp.json` → Todoist's official remote MCP server (`https://ai.todoist.net/mcp`) | OAuth sign-in in the browser when first used | 10 tasks |
+| Jira | `.mcp.json` → Atlassian's official remote MCP server (`https://mcp.atlassian.com/v1/mcp/authv2`) | OAuth sign-in in the browser when first used | 23 issues |
+| Gmail | Google's official Gmail MCP server, through the **claude.ai Gmail connector** | Google sign-in on claude.ai | 24 emails |
 
 **Why Gmail is different:** using Google's Gmail MCP server with your own OAuth client
 requires joining Google's preview program, and that program doesn't accept personal
@@ -24,7 +31,7 @@ official server, and it isn't listed in `.mcp.json`.
 
 ```
 .
-├── .mcp.json                 # MCP server config for GitHub, Notion and Linear
+├── .mcp.json                 # MCP server config for GitHub, Notion, Linear, Todoist and Jira
 ├── .claude/skills/
 │   └── export-service-data/  # Claude Code skill that downloads data into dataExports/
 ├── localStorageFormats.md    # Spec for how exported data is stored (naming, fields, metadata)
@@ -32,7 +39,9 @@ official server, and it isn't listed in `.mcp.json`.
 │   ├── gmail/                #   emails
 │   ├── github/               #   repositories
 │   ├── notion/               #   pages
-│   └── linear/               #   issues
+│   ├── linear/               #   issues
+│   ├── todoist/              #   tasks
+│   └── jira/                 #   issues
 └── dashboard/                # Local search website (Python server + one HTML page)
 ```
 
@@ -64,4 +73,4 @@ services at once, filter by service, and click any result to see the full item. 
 
 All data in this repo is **fictional test data** from throwaway accounts created for this
 assignment. The repo contains **no secrets**: the GitHub token comes from an environment
-variable, Notion and Linear use OAuth, and `.gitignore` keeps out `.env` and credential files.
+variable, Notion, Linear, Todoist and Jira use OAuth, and `.gitignore` keeps out `.env` and credential files.
