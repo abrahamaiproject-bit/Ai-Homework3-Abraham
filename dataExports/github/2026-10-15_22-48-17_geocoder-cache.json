@@ -1,0 +1,17 @@
+{
+  "service": "github",
+  "id": "1421401343",
+  "title": "abrahamaiproject-bit/geocoder-cache",
+  "body": "# geocoder-cache\n\nRedis-backed cache in front of the third-party geocoding API, used by **Project Atlas** to cut routing latency.\n\nGeocoding accounted for about 40% of request time in the routing API. This cache targets a 90%+ hit rate.\n\n## Owner\nJoe Smith\n",
+  "author": "abrahamaiproject-bit",
+  "created": "2026-10-15T22:48:17Z",
+  "updated": "2026-10-15T22:49:02Z",
+  "url": "https://github.com/abrahamaiproject-bit/geocoder-cache",
+  "metadata": {
+    "description": "Redis-backed geocoding cache used by Project Atlas",
+    "language": null,
+    "visibility": "private",
+    "default_branch": "main",
+    "readme": "# geocoder-cache\n\nRedis-backed cache in front of the third-party geocoding API, used by **Project Atlas** to cut routing latency.\n\nGeocoding accounted for about 40% of request time in the routing API. This cache targets a 90%+ hit rate.\n\n## Owner\nJoe Smith\n"
+  }
+}

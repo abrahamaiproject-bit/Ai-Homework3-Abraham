@@ -1,0 +1,28 @@
+{
+  "service": "notion",
+  "id": "3fa6f755-57f6-80f5-8a89-e26429a89dfa",
+  "title": "Click me to see even more detail",
+  "body": "Every item in your to do database table has a page that you can edit with content blocks (things like text, bullets, images etc.) - it’s just like editing any other document.\n<empty-block/>\nTry the following:\n- [ ] Click anywhere and start typing\n- [ ] Type the `/` key to add all kinds of content — headers, pages, etc.\n\t(Here’s an <mention-page url=\"https://app.notion.com/p/3fa6f75557f6800f998ef33204ecb48d\">Example sub-page</mention-page>!)\n- [ ] Hover over this line, click and hold the : then drag to move it around\n<empty-block/>\n<callout icon=\"/icons/notion_gray.svg\" color=\"gray_bg\">\n\tThis Database is configured as a Tasks database which allows its contents to appear on your Home tab. All tasks will make their way there. \n\t[Give your to-dos a Home with Task databases](https://www.notion.com/help/guides/give-your-to-dos-a-home-with-task-databases)\n</callout>\n<empty-block/>",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T19:34:00.000Z",
+  "updated": "2026-10-15T19:34:01.024Z",
+  "url": "https://app.notion.com/p/3fa6f75557f680f58a89e26429a89dfa",
+  "metadata": {
+    "parent": {
+      "type": "database",
+      "name": "Todo List",
+      "id": "3fa6f755-57f6-80c1-a143-effec6c6c71a"
+    },
+    "properties": {
+      "Assignee": [
+        "<mention-user url=\"user://3fad872b-594c-816a-bd09-000294172eea\"></mention-user>"
+      ],
+      "Status": "Not started",
+      "Task name": "Click me to see even more detail",
+      "date:Due date:is_datetime": 0,
+      "date:Due date:start": "2026-10-15",
+      "url": "https://app.notion.com/p/3fa6f75557f680f58a89e26429a89dfa"
+    },
+    "icon": null
+  }
+}

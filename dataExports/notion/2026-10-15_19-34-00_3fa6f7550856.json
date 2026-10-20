@@ -1,0 +1,20 @@
+{
+  "service": "notion",
+  "id": "3fa6f755-57f6-807b-aebf-ec7b06320856",
+  "title": "Welcome to Notion",
+  "body": "- [x] Create an account with Notion\n- [ ] [Download the desktop app](https://notion.so/dynamic-download/desktop) to unlock offline mode and take Notion with you wherever you go\n- [ ] Start building with Notion Agent <unknown_mention url=\"notion://custom_emoji/1f88cc90-92fd-4ce4-bfcd-25daec2ffbbe/26517954-d9c2-8047-bdc5-007a01338900\" alt=\"custom_emoji\"/>. Tell it what you’re here to do, and Agent will create it for you in seconds.\n- [ ] Click anywhere below and **type ****`/`**** **to see what you can create – headers, tables, to-do’s, etc.\n\t- [ ] Type `/page` to add a **new page** and nest anything, anywhere\n- [ ] **Find**, **organize**, and **add new pages** using the sidebar to the left 👈\n\t- [ ] Check out the **To Do List** we added for you with more tips and tricks to best use Notion\n\t- [ ] Make a new page and type `/meet` to capture meeting notes and thoughts effortlessly\n\t\t- [ ] Afterwards, find all your meetings in one place in the [**Meetings tab**](https://www.notion.so/meet)\n<details>\n<summary>This is a toggle block. Click the little triangle to see a few more useful tips!</summary>\n\t- Click <unknown_mention url=\"notion://custom_emoji/1f88cc90-92fd-4ce4-bfcd-25daec2ffbbe/1fc17954-d9c2-8084-8bba-007a6e34cc81\" alt=\"custom_emoji\"/>** Marketplace** in your sidebar to try setups from our incredible community\n\t- Check out [Notion Academy](https://academy.notion.com?utm_campaign=gsqw) to level up your Notion knowledge through guided courses (and earn badges while you’re at it!)\n</details>\n<empty-block/>",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T19:34:00.000Z",
+  "updated": "2026-10-15T19:34:01.237Z",
+  "url": "https://app.notion.com/p/3fa6f75557f6807baebfec7b06320856",
+  "metadata": {
+    "parent": {
+      "type": "workspace",
+      "name": "Abraham AIProject’s Space"
+    },
+    "properties": {
+      "title": "Welcome to Notion"
+    },
+    "icon": "👋"
+  }
+}

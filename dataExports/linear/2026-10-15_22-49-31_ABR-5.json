@@ -1,0 +1,19 @@
+{
+  "service": "linear",
+  "id": "ABR-5",
+  "title": "[Project Atlas] Reduce routing API p95 latency below 250ms",
+  "body": "Current p95 latency is 310ms after the geocoder cache landed. Joe Smith's profiling shows geocoding is still about 40% of request time.\n\nAcceptance: p95 under 250ms on the staging load test.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T22:49:31.966Z",
+  "updated": "2026-10-15T22:49:31.966Z",
+  "url": "https://linear.app/abraham-gabay/issue/ABR-5/project-atlas-reduce-routing-api-p95-latency-below-250ms",
+  "metadata": {
+    "identifier": "ABR-5",
+    "status": "Backlog",
+    "priority": "High",
+    "assignee": null,
+    "labels": [],
+    "team": "Abraham Gabay",
+    "project": null
+  }
+}

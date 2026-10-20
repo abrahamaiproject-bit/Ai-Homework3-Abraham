@@ -1,0 +1,28 @@
+{
+  "service": "notion",
+  "id": "3fa6f755-57f6-807a-8283-c4e7299ffd68",
+  "title": "Click me to learn how to hide checked items",
+  "body": "From the list, click the <unknown_mention url=\"notion://custom_emoji/1f88cc90-92fd-4ce4-bfcd-25daec2ffbbe/22417954-d9c2-808f-8850-007a942e86cb\" alt=\"custom_emoji\"/> button to change your filters.\n![](https://s3-us-west-2.amazonaws.com/public.notion-static.com/1f88cc90-92fd-4ce4-bfcd-25daec2ffbbe/ad522c73-8087-45a9-ab24-78a815adc04a/image.png)\nSelect “Status”. \n![](https://s3-us-west-2.amazonaws.com/public.notion-static.com/1f88cc90-92fd-4ce4-bfcd-25daec2ffbbe/7e0f3e50-a095-45de-8ada-125609a62227/image.png)\nThen check “To Do” and “In Progress” to only see unchecked items in the list. Click “Save for everyone” to finish.\n![](https://s3-us-west-2.amazonaws.com/public.notion-static.com/1f88cc90-92fd-4ce4-bfcd-25daec2ffbbe/8cd17aa8-5a4b-4ee0-8cb7-d4c6615dc92a/image.png)\n<callout icon=\"/icons/notion_gray.svg\" color=\"gray_bg\">\n\t**Notion Tip**\n\tYou can keep track of all sorts of other information about your to dos!\n\tClick “➕ Add a property” to see all the other things you can do.\n</callout>",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T19:34:00.000Z",
+  "updated": "2026-10-15T19:34:01.024Z",
+  "url": "https://app.notion.com/p/3fa6f75557f6807a8283c4e7299ffd68",
+  "metadata": {
+    "parent": {
+      "type": "database",
+      "name": "Todo List",
+      "id": "3fa6f755-57f6-80c1-a143-effec6c6c71a"
+    },
+    "properties": {
+      "Assignee": [
+        "<mention-user url=\"user://3fad872b-594c-816a-bd09-000294172eea\"></mention-user>"
+      ],
+      "Status": "Not started",
+      "Task name": "Click me to learn how to hide checked items",
+      "date:Due date:is_datetime": 0,
+      "date:Due date:start": "2026-10-15",
+      "url": "https://app.notion.com/p/3fa6f75557f6807a8283c4e7299ffd68"
+    },
+    "icon": null
+  }
+}

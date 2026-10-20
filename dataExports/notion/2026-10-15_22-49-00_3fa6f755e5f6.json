@@ -1,0 +1,20 @@
+{
+  "service": "notion",
+  "id": "3fa6f755-57f6-81e7-8899-cff6d3ace5f6",
+  "title": "November Offsite – Hudson Valley",
+  "body": "## Dates\nNovember 20-21\n## Agenda\n- Day 1: Strategy and the 2027 roadmap\n- Day 2: Hack day and team dinner\n## Logistics\nDietary preferences form due November 1.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T22:49:00.000Z",
+  "updated": "2026-10-15T22:49:16.477Z",
+  "url": "https://app.notion.com/p/3fa6f75557f681e78899cff6d3ace5f6",
+  "metadata": {
+    "parent": {
+      "type": "workspace",
+      "name": "Abraham AIProject’s Space"
+    },
+    "properties": {
+      "title": "November Offsite – Hudson Valley"
+    },
+    "icon": "🏕️"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "service": "notion",
+  "id": "3fa6f755-57f6-8102-9b6f-cf33f26ba031",
+  "title": "Pricing Strategy",
+  "body": "## Current plans\n- Starter: $29/vehicle/month\n- Growth: $49/vehicle/month\n- Enterprise: custom pricing\n## Open questions\n- Should live traffic routing be a paid add-on?\n- Annual discount: 15% or 20%?",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T22:49:00.000Z",
+  "updated": "2026-10-15T22:49:16.477Z",
+  "url": "https://app.notion.com/p/3fa6f75557f681029b6fcf33f26ba031",
+  "metadata": {
+    "parent": {
+      "type": "workspace",
+      "name": "Abraham AIProject’s Space"
+    },
+    "properties": {
+      "title": "Pricing Strategy"
+    },
+    "icon": "💰"
+  }
+}

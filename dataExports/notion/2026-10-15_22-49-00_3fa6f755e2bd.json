@@ -1,0 +1,20 @@
+{
+  "service": "notion",
+  "id": "3fa6f755-57f6-81af-ac3a-e8dacfece2bd",
+  "title": "Hiring Plan – Senior Data Engineer",
+  "body": "## Role\nOwn the telemetry pipeline and ClickHouse warehouse.\n## Loop\n- System design (60 min)\n- SQL and pipelines exercise (45 min)\n- Values (30 min)\n## Status\n3 finalists, with a decision expected by October 31.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T22:49:00.000Z",
+  "updated": "2026-10-15T22:49:16.477Z",
+  "url": "https://app.notion.com/p/3fa6f75557f681afac3ae8dacfece2bd",
+  "metadata": {
+    "parent": {
+      "type": "workspace",
+      "name": "Abraham AIProject’s Space"
+    },
+    "properties": {
+      "title": "Hiring Plan – Senior Data Engineer"
+    },
+    "icon": "🧑‍💻"
+  }
+}

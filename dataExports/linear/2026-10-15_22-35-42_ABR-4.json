@@ -1,0 +1,19 @@
+{
+  "service": "linear",
+  "id": "ABR-4",
+  "title": "Set up your teams",
+  "body": "This workspace is a container for your organization’s work. \n\n* [Learn more about Workspaces](<https://linear.app/docs/workspaces>)\n  How to configure settings and workflows \n\nTeams are how you organize people and work in Linear.\n\n* [Learn about Teams](<https://linear.app/docs/teams>)\n  How to structure teams and configure workflows\n\nTeams are made of members with defined roles (Admin, Member, Guest).\n\n* [Learn more about Members](<https://linear.app/docs/invite-members>)\n  Add your team and assign roles\n\n---\n\nReady to add your team? Invite via CSV or a unique link in [settings](<http://linear.app/settings/members>).",
+  "author": null,
+  "created": "2026-10-15T22:35:42.279Z",
+  "updated": "2026-10-15T22:35:42.279Z",
+  "url": "https://linear.app/abraham-gabay/issue/ABR-4/set-up-your-teams",
+  "metadata": {
+    "identifier": "ABR-4",
+    "status": "Todo",
+    "priority": "No priority",
+    "assignee": null,
+    "labels": [],
+    "team": "Abraham Gabay",
+    "project": null
+  }
+}

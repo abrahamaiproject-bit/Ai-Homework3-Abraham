@@ -1,0 +1,19 @@
+{
+  "service": "linear",
+  "id": "ABR-9",
+  "title": "Downsize staging RDS instance",
+  "body": "Staging DB was left on db.r6g.2xlarge after load testing and caused a $3.8k cost spike in September. Move it to db.t4g.medium and add a $4k budget alert.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T22:49:35.969Z",
+  "updated": "2026-10-15T22:49:35.969Z",
+  "url": "https://linear.app/abraham-gabay/issue/ABR-9/downsize-staging-rds-instance",
+  "metadata": {
+    "identifier": "ABR-9",
+    "status": "Backlog",
+    "priority": "High",
+    "assignee": null,
+    "labels": [],
+    "team": "Abraham Gabay",
+    "project": null
+  }
+}

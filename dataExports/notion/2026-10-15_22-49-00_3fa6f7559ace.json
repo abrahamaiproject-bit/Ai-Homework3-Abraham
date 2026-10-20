@@ -1,0 +1,20 @@
+{
+  "service": "notion",
+  "id": "3fa6f755-57f6-8122-8732-e08a88ef9ace",
+  "title": "Engineering Onboarding Guide",
+  "body": "## Week one\n1. Get access to GitHub, Linear, and Notion\n2. Read eng-handbook\n3. Set up the local dev environment\n4. Pick up a starter issue\n5. Attend the Thursday demo\nNew engineers have a 1:1 with Joe Smith on their first Tuesday.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T22:49:00.000Z",
+  "updated": "2026-10-15T22:49:16.477Z",
+  "url": "https://app.notion.com/p/3fa6f75557f681228732e08a88ef9ace",
+  "metadata": {
+    "parent": {
+      "type": "workspace",
+      "name": "Abraham AIProject’s Space"
+    },
+    "properties": {
+      "title": "Engineering Onboarding Guide"
+    },
+    "icon": "👋"
+  }
+}

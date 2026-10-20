@@ -1,0 +1,17 @@
+{
+  "service": "github",
+  "id": "1421401305",
+  "title": "abrahamaiproject-bit/infra-terraform",
+  "body": "# infra-terraform\n\nTerraform modules for Lumen Freight's AWS infrastructure (VPC, EKS, RDS, ElastiCache).\n\n## Environments\n- `envs/staging`\n- `envs/production`\n\n## Conventions\n- Every resource must have `team` and `environment` tags.\n- Budget alert set at $4,000/month (added after the September cost spike).\n",
+  "author": "abrahamaiproject-bit",
+  "created": "2026-10-15T22:48:13Z",
+  "updated": "2026-10-15T22:49:00Z",
+  "url": "https://github.com/abrahamaiproject-bit/infra-terraform",
+  "metadata": {
+    "description": "Terraform modules for Lumen Freight AWS infrastructure",
+    "language": null,
+    "visibility": "private",
+    "default_branch": "main",
+    "readme": "# infra-terraform\n\nTerraform modules for Lumen Freight's AWS infrastructure (VPC, EKS, RDS, ElastiCache).\n\n## Environments\n- `envs/staging`\n- `envs/production`\n\n## Conventions\n- Every resource must have `team` and `environment` tags.\n- Budget alert set at $4,000/month (added after the September cost spike).\n"
+  }
+}

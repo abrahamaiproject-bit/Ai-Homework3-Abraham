@@ -1,0 +1,17 @@
+{
+  "service": "github",
+  "id": "1421401419",
+  "title": "abrahamaiproject-bit/eng-handbook",
+  "body": "# Lumen Freight Engineering Handbook\n\nHow we build software at Lumen Freight.\n\n## Contents\n- Code review guidelines\n- On-call and incident response\n- Onboarding checklist\n- Architecture decision records (including the Project Atlas design)\n\nMaintained by Joe Smith.\n",
+  "author": "abrahamaiproject-bit",
+  "created": "2026-10-15T22:48:23Z",
+  "updated": "2026-10-15T22:49:04Z",
+  "url": "https://github.com/abrahamaiproject-bit/eng-handbook",
+  "metadata": {
+    "description": "Lumen Freight engineering handbook",
+    "language": null,
+    "visibility": "private",
+    "default_branch": "main",
+    "readme": "# Lumen Freight Engineering Handbook\n\nHow we build software at Lumen Freight.\n\n## Contents\n- Code review guidelines\n- On-call and incident response\n- Onboarding checklist\n- Architecture decision records (including the Project Atlas design)\n\nMaintained by Joe Smith.\n"
+  }
+}

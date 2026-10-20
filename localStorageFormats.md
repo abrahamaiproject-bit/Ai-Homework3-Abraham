@@ -102,6 +102,12 @@ Every file is one JSON object with these top-level fields, in this order:
 | `updated` = `created` | linear | Used when `list_issues` returns no newer `updatedAt`. |
 | `metadata.assignee` = `null` | linear | Issue is unassigned. |
 | `metadata.project` = `null` | linear | Issue belongs to no project. |
+| `author` = `null` | linear | Linear's built-in onboarding issues (ABR-1 to ABR-4) have no `createdBy`. |
+| `url` = message `viewUrl` | gmail | For threads with several messages, each file uses its own message link (ending in `msg-f:<id>`) so that files in the same thread don't share a URL. |
+| `metadata.readme` = `null`, `body` = `""` | github | Repo has no `README.md`. |
+| `body` = `""` | notion | Page is blank (the fetch tool returns `<blank-page>`). |
+| `metadata.icon` = `null` | notion | Page has no icon, or has a built-in Notion icon (e.g. `icons/checklist_green`) instead of an emoji. |
+| `parent` = database / page | notion | Rows of the "Todo List" database record `{ "type": "database", "name", "id" }`; nested sub-pages record their direct parent page. |
 
 ## Examples
 

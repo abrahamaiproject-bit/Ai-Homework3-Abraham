@@ -1,0 +1,20 @@
+{
+  "service": "notion",
+  "id": "3fa6f755-57f6-817e-beb9-cf1867c97460",
+  "title": "Incident Postmortem – Dispatch Outage (Oct 9)",
+  "body": "## Summary\nDispatch was down for 47 minutes because a TLS certificate on the internal queue expired.\n## Root cause\nThe auto-renew cron job was disabled during a migration.\n## Follow-ups\n- Certificate expiry monitoring\n- Rotation runbook\n- Audit of disabled cron jobs",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T22:49:00.000Z",
+  "updated": "2026-10-15T22:49:16.477Z",
+  "url": "https://app.notion.com/p/3fa6f75557f6817ebeb9cf1867c97460",
+  "metadata": {
+    "parent": {
+      "type": "workspace",
+      "name": "Abraham AIProject’s Space"
+    },
+    "properties": {
+      "title": "Incident Postmortem – Dispatch Outage (Oct 9)"
+    },
+    "icon": "🔥"
+  }
+}

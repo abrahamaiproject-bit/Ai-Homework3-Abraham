@@ -1,0 +1,17 @@
+{
+  "service": "github",
+  "id": "1421405372",
+  "title": "abrahamaiproject-bit/atlas-dispatch-service",
+  "body": "# atlas-dispatch-service\n\nDispatch and job assignment service for **Project Atlas**. It takes optimized routes from the routing engine, assigns them to drivers, and publishes them to the driver mobile app.\n\n## Owner\nJoe Smith (VP of Engineering)\n\n## Notes\n- Caused the October 9 outage (an expired TLS certificate on the internal queue). See the postmortem in Notion.\n- Planned migration to Kafka for dispatch events in Q1.\n\n## Running locally\n```bash\nmake up\nmake test\n```\n",
+  "author": "abrahamaiproject-bit",
+  "created": "2026-10-15T22:54:16Z",
+  "updated": "2026-10-15T22:54:27Z",
+  "url": "https://github.com/abrahamaiproject-bit/atlas-dispatch-service",
+  "metadata": {
+    "description": "Project Atlas dispatch and job assignment service (Lumen Freight)",
+    "language": null,
+    "visibility": "private",
+    "default_branch": "main",
+    "readme": "# atlas-dispatch-service\n\nDispatch and job assignment service for **Project Atlas**. It takes optimized routes from the routing engine, assigns them to drivers, and publishes them to the driver mobile app.\n\n## Owner\nJoe Smith (VP of Engineering)\n\n## Notes\n- Caused the October 9 outage (an expired TLS certificate on the internal queue). See the postmortem in Notion.\n- Planned migration to Kafka for dispatch events in Q1.\n\n## Running locally\n```bash\nmake up\nmake test\n```\n"
+  }
+}

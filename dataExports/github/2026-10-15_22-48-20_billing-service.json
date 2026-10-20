@@ -1,0 +1,17 @@
+{
+  "service": "github",
+  "id": "1421401383",
+  "title": "abrahamaiproject-bit/billing-service",
+  "body": "# billing-service\n\nHandles Lumen Freight subscription billing through Stripe: per-vehicle monthly pricing, invoicing, and dunning.\n\n## Plans\n- Starter: $29/vehicle/month\n- Growth: $49/vehicle/month (includes live tracking)\n- Enterprise: custom pricing\n",
+  "author": "abrahamaiproject-bit",
+  "created": "2026-10-15T22:48:20Z",
+  "updated": "2026-10-15T22:49:03Z",
+  "url": "https://github.com/abrahamaiproject-bit/billing-service",
+  "metadata": {
+    "description": "Stripe-based subscription billing",
+    "language": null,
+    "visibility": "private",
+    "default_branch": "main",
+    "readme": "# billing-service\n\nHandles Lumen Freight subscription billing through Stripe: per-vehicle monthly pricing, invoicing, and dunning.\n\n## Plans\n- Starter: $29/vehicle/month\n- Growth: $49/vehicle/month (includes live tracking)\n- Enterprise: custom pricing\n"
+  }
+}

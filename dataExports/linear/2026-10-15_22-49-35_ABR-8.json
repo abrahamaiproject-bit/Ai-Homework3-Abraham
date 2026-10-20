@@ -1,0 +1,19 @@
+{
+  "service": "linear",
+  "id": "ABR-8",
+  "title": "Write runbook for message queue cert rotation",
+  "body": "Document the manual steps to rotate the internal queue's TLS certificate, including verification and rollback.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T22:49:35.033Z",
+  "updated": "2026-10-15T22:49:35.033Z",
+  "url": "https://linear.app/abraham-gabay/issue/ABR-8/write-runbook-for-message-queue-cert-rotation",
+  "metadata": {
+    "identifier": "ABR-8",
+    "status": "Backlog",
+    "priority": "Medium",
+    "assignee": null,
+    "labels": [],
+    "team": "Abraham Gabay",
+    "project": null
+  }
+}

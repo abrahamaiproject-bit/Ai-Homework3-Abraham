@@ -1,0 +1,21 @@
+{
+  "service": "notion",
+  "id": "3fa6f755-57f6-800f-998e-f33204ecb48d",
+  "title": "Example sub-page",
+  "body": "",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T19:34:00.000Z",
+  "updated": "2026-10-15T19:34:01.024Z",
+  "url": "https://app.notion.com/p/3fa6f75557f6800f998ef33204ecb48d",
+  "metadata": {
+    "parent": {
+      "type": "page",
+      "name": "(Here’s an ‣!)",
+      "id": "3fa6f755-57f6-80ba-9400-f7ff89b71f62"
+    },
+    "properties": {
+      "title": "Example sub-page"
+    },
+    "icon": null
+  }
+}

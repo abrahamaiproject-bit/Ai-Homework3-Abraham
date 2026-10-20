@@ -1,0 +1,28 @@
+{
+  "service": "notion",
+  "id": "3fa6f755-57f6-8027-93cf-cac1ddd96d98",
+  "title": "Check the box to mark items as done",
+  "body": "",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T19:34:00.000Z",
+  "updated": "2026-10-15T19:34:01.024Z",
+  "url": "https://app.notion.com/p/3fa6f75557f6802793cfcac1ddd96d98",
+  "metadata": {
+    "parent": {
+      "type": "database",
+      "name": "Todo List",
+      "id": "3fa6f755-57f6-80c1-a143-effec6c6c71a"
+    },
+    "properties": {
+      "Assignee": [
+        "<mention-user url=\"user://3fad872b-594c-816a-bd09-000294172eea\"></mention-user>"
+      ],
+      "Status": "Done",
+      "Task name": "Check the box to mark items as done",
+      "date:Due date:is_datetime": 0,
+      "date:Due date:start": "2026-10-15",
+      "url": "https://app.notion.com/p/3fa6f75557f6802793cfcac1ddd96d98"
+    },
+    "icon": null
+  }
+}

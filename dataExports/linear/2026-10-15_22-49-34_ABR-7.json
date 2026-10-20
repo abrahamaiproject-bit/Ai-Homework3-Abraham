@@ -1,0 +1,19 @@
+{
+  "service": "linear",
+  "id": "ABR-7",
+  "title": "Add TLS certificate expiry monitoring",
+  "body": "Follow-up from the October 9 dispatch outage postmortem. Alert 14 days before any certificate expires. Assigned to Joe Smith per the postmortem.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-15T22:49:34.219Z",
+  "updated": "2026-10-15T22:49:34.219Z",
+  "url": "https://linear.app/abraham-gabay/issue/ABR-7/add-tls-certificate-expiry-monitoring",
+  "metadata": {
+    "identifier": "ABR-7",
+    "status": "Backlog",
+    "priority": "High",
+    "assignee": null,
+    "labels": [],
+    "team": "Abraham Gabay",
+    "project": null
+  }
+}
