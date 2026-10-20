@@ -18,6 +18,10 @@
     "todoist": {
       "type": "http",
       "url": "https://ai.todoist.net/mcp"
+    },
+    "atlassian": {
+      "type": "http",
+      "url": "https://mcp.atlassian.com/v1/mcp/authv2"
     }
   }
 }

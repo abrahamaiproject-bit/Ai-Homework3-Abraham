@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "KAN-9",
+  "title": "Proof-of-delivery photo uploads fail on slow mobile connections",
+  "body": "Drivers using the Lumen Freight driver app report that POD photo uploads time out when signal is weak (common at rural receivers). The driver then has to retry from the parking lot, which delays invoicing.\n\n**Observed:** Upload times out after 30s with \"Network error\" and the photo is lost.\n\n**Expected:** Photos are queued locally and upload in the background once connectivity improves.\n\n**Proposed fix**\n\n* Compress images client-side to under 500 KB before upload\n* Add an offline upload queue with retry and exponential backoff\n* Show a \"pending upload\" badge on the stop until the upload succeeds\n\n",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:21:18.246Z",
+  "updated": "2026-10-20T21:21:18.317Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/KAN-9",
+  "metadata": {
+    "key": "KAN-9",
+    "issueType": "Task",
+    "status": "To Do",
+    "priority": "High",
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "My Software Team",
+    "parent": null,
+    "due": null
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "KAN-2",
+  "title": "Task 2",
+  "body": "",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:17:12.619Z",
+  "updated": "2026-10-20T21:17:12.973Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/KAN-2",
+  "metadata": {
+    "key": "KAN-2",
+    "issueType": "Story",
+    "status": "In Progress",
+    "priority": null,
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "My Software Team",
+    "parent": null,
+    "due": "2026-10-30"
+  }
+}

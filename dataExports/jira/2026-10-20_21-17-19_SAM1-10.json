@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "SAM1-10",
+  "title": "Finalize Documentation for the Project",
+  "body": "Documentation is essential for both users and developers. This task includes:\n\n* Writing user manuals.\n* Creating API documentation.\n* Compiling developer guides.\n\nThe goal is to ensure that all aspects of the project are well-documented for future reference.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:17:19.616Z",
+  "updated": "2026-10-20T21:17:20.296Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/SAM1-10",
+  "metadata": {
+    "key": "SAM1-10",
+    "issueType": "Task",
+    "status": "In Review",
+    "priority": null,
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "(Example) Billing System Dev",
+    "parent": "SAM1-5",
+    "due": "2026-11-08"
+  }
+}

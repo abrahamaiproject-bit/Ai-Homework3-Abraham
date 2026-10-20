@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "SAM1-8",
+  "title": "Develop Transaction History Feature",
+  "body": "The **Transaction History** feature allows users to view their past transactions. This task involves:\n\n* Designing the transaction history interface.\n* Implementing backend logic to retrieve transaction data.\n* Ensuring data accuracy and security.\n\nThis feature is vital for users to track their investment performance over time.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:17:17.956Z",
+  "updated": "2026-10-20T21:17:18.628Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/SAM1-8",
+  "metadata": {
+    "key": "SAM1-8",
+    "issueType": "Task",
+    "status": "To Do",
+    "priority": null,
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "(Example) Billing System Dev",
+    "parent": "SAM1-2",
+    "due": "2026-10-27"
+  }
+}

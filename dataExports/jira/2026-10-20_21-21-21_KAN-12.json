@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "KAN-12",
+  "title": "Migrate dispatch service database from MySQL 5.7 to PostgreSQL 16",
+  "body": "The dispatch service still runs on a self-managed MySQL 5.7 instance, which is past end-of-life. Migrate it to our managed PostgreSQL 16 cluster.\n\n**Plan**\n\n* Convert schema and stored procedures; audit queries for MySQL-specific syntax\n* Set up dual writes and a backfill job\n* Run read-path comparison in shadow mode for one week\n* Cut over during the Sunday low-traffic window\n* Keep the MySQL instance read-only for 30 days as a rollback option\n\n**Risks:** Dispatch is business-critical; any downtime blocks load assignment. Needs a tested rollback plan before cutover.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:21:21.577Z",
+  "updated": "2026-10-20T21:21:21.641Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/KAN-12",
+  "metadata": {
+    "key": "KAN-12",
+    "issueType": "Task",
+    "status": "To Do",
+    "priority": "Medium",
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "My Software Team",
+    "parent": null,
+    "due": null
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "SAM1-7",
+  "title": "Create Wallet Integration",
+  "body": "Integrating a cryptocurrency wallet is essential for users to manage their assets. This task includes:\n\n* Researching wallet APIs.\n* Implementing wallet connection features.\n* Testing wallet transactions.\n\nThe integration should support multiple cryptocurrencies and ensure that transactions are secure and efficient.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:17:17.081Z",
+  "updated": "2026-10-20T21:17:17.740Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/SAM1-7",
+  "metadata": {
+    "key": "SAM1-7",
+    "issueType": "Task",
+    "status": "In Progress",
+    "priority": null,
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "(Example) Billing System Dev",
+    "parent": "SAM1-2",
+    "due": "2026-10-28"
+  }
+}

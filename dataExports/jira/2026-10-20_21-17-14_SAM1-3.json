@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "SAM1-3",
+  "title": "Conduct User Testing for the Platform",
+  "body": "User testing is essential to ensure that the platform meets user needs. This task includes:\n\n* Recruiting test users.\n* Creating test scenarios.\n* Collecting feedback and making adjustments.\n\nThe goal is to identify any usability issues before the official launch.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:17:14.150Z",
+  "updated": "2026-10-20T21:17:14.563Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/SAM1-3",
+  "metadata": {
+    "key": "SAM1-3",
+    "issueType": "Epic",
+    "status": "In Progress",
+    "priority": null,
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "(Example) Billing System Dev",
+    "parent": null,
+    "due": "2026-10-31"
+  }
+}

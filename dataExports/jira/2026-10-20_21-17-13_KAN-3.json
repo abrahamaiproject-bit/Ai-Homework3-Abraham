@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "KAN-3",
+  "title": "Subtask 2.1",
+  "body": "",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:17:13.143Z",
+  "updated": "2026-10-20T21:17:13.460Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/KAN-3",
+  "metadata": {
+    "key": "KAN-3",
+    "issueType": "Subtask",
+    "status": "To Do",
+    "priority": null,
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "My Software Team",
+    "parent": null,
+    "due": null
+  }
+}

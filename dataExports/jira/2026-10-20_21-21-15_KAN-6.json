@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "KAN-6",
+  "title": "Fix duplicate invoices generated for multi-stop loads",
+  "body": "Joe Smith from finance reported that shippers are receiving two invoices for loads with more than one delivery stop. At least 14 duplicate invoices went out last week, and two customers have already disputed charges.\n\n**Steps to reproduce**\n\n1. Create a load with 2+ delivery stops\n2. Mark each stop as delivered\n3. Observe that the invoicing job fires once per stop instead of once per load\n\n**Expected:** One invoice is generated when the final stop is marked delivered.\n\n**Action items**\n\n* Patch the invoicing trigger to fire on load completion only\n* Write a script to identify and void existing duplicates\n* Coordinate with Joe Smith on customer credit notes\n\n",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:21:15.039Z",
+  "updated": "2026-10-20T21:21:15.101Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/KAN-6",
+  "metadata": {
+    "key": "KAN-6",
+    "issueType": "Task",
+    "status": "To Do",
+    "priority": "High",
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "My Software Team",
+    "parent": null,
+    "due": null
+  }
+}

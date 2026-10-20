@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "SAM1-2",
+  "title": "Implement Market Analysis Tools",
+  "body": "The **Market Analysis Tools** will provide users with insights into market trends. This task includes:\n\n* Developing charts for price tracking.\n* Implementing indicators for market analysis.\n* Ensuring real-time data updates.\n\nThese tools will empower users to make informed investment decisions.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:17:13.512Z",
+  "updated": "2026-10-20T21:17:13.923Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/SAM1-2",
+  "metadata": {
+    "key": "SAM1-2",
+    "issueType": "Epic",
+    "status": "In Review",
+    "priority": null,
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "(Example) Billing System Dev",
+    "parent": null,
+    "due": "2026-11-07"
+  }
+}

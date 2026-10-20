@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "KAN-4",
+  "title": "Real-time shipment tracking map for shippers (Project Atlas)",
+  "body": "As a shipper using the Lumen Freight portal, I want to see my in-transit loads on a live map so I can give my customers accurate ETAs without calling dispatch.\n\nThis is the headline feature of **Project Atlas**, our Q1 initiative to rebuild the shipper portal around real-time visibility.\n\n**Acceptance criteria**\n\n* Map shows every active load with the carrier's last GPS ping (updated at least every 2 minutes)\n* Clicking a load shows origin, destination, ETA and assigned carrier\n* Loads with stale pings (>30 min) are flagged in amber\n* Works on desktop and tablet widths\n\n**Notes**\n\n* GPS data comes from the ELD integration (see telematics ingestion task)\n* Design mockups are in the Project Atlas Figma file\n\n",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:21:12.626Z",
+  "updated": "2026-10-20T21:21:12.724Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/KAN-4",
+  "metadata": {
+    "key": "KAN-4",
+    "issueType": "Story",
+    "status": "To Do",
+    "priority": "Medium",
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "My Software Team",
+    "parent": null,
+    "due": null
+  }
+}

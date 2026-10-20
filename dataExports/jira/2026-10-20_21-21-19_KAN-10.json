@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "KAN-10",
+  "title": "Instant quote calculator for full-truckload shipments",
+  "body": "As a prospective shipper, I want an instant price quote for a full-truckload shipment on the Lumen Freight website so I can book without waiting for a sales rep.\n\n**Acceptance criteria**\n\n* Inputs: origin ZIP, destination ZIP, pickup date, equipment type (dry van, reefer, flatbed)\n* Quote is based on lane market rate, fuel surcharge and a configurable margin\n* Quote is valid for 24 hours and can be converted to a booking in one click\n* Quotes are logged for the sales team to follow up\n\n**Out of scope:** LTL and multi-stop quoting (separate story).",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:21:19.364Z",
+  "updated": "2026-10-20T21:21:19.480Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/KAN-10",
+  "metadata": {
+    "key": "KAN-10",
+    "issueType": "Story",
+    "status": "To Do",
+    "priority": "Medium",
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "My Software Team",
+    "parent": null,
+    "due": null
+  }
+}

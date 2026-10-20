@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "KAN-7",
+  "title": "Automated carrier onboarding with FMCSA authority verification",
+  "body": "As an operations coordinator, I want new carriers' MC/DOT numbers checked automatically against the FMCSA database so we stop onboarding carriers with inactive authority or lapsed insurance.\n\n**Acceptance criteria**\n\n* Carrier signup form validates MC/DOT number against the FMCSA API\n* Carriers with inactive authority or out-of-service orders are blocked with a clear message\n* Insurance certificate expiry date is captured and a reminder is scheduled 30 days before expiry\n* Ops dashboard shows the verification status of every carrier\n\n**Context:** We onboarded a carrier with revoked authority last month, which created a compliance risk. Joe Smith (Head of Carrier Relations) is the business owner for this story and will sign off on the UX.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:21:16.094Z",
+  "updated": "2026-10-20T21:21:16.160Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/KAN-7",
+  "metadata": {
+    "key": "KAN-7",
+    "issueType": "Story",
+    "status": "To Do",
+    "priority": "Medium",
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "My Software Team",
+    "parent": null,
+    "due": null
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "SAM1-6",
+  "title": "Set Up Notifications for Users",
+  "body": "Setting up notifications is crucial for keeping users informed about their investments. This task involves:\n\n* Designing notification settings.\n* Implementing alerts for price changes.\n* Testing notification delivery methods.\n\nNotifications should be customizable to enhance user experience.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:17:16.129Z",
+  "updated": "2026-10-20T21:17:16.877Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/SAM1-6",
+  "metadata": {
+    "key": "SAM1-6",
+    "issueType": "Task",
+    "status": "To Do",
+    "priority": null,
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "(Example) Billing System Dev",
+    "parent": "SAM1-1",
+    "due": "2026-11-10"
+  }
+}

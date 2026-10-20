@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "KAN-13",
+  "title": "Detention time alerts for dispatchers",
+  "body": "As a dispatcher, I want to be alerted when a truck has been waiting at a shipper or receiver for more than 2 hours, so I can escalate and bill detention charges on time.\n\n**Acceptance criteria**\n\n* Detect arrival and departure at a facility using geofences around pickup and delivery addresses\n* Send an alert to the assigned dispatcher at 2 hours of dwell time, then every hour after that\n* Automatically add a detention line item to the load (rate set per customer contract)\n* Weekly report of top facilities by average dwell time\n\n**Requested by:** Joe Smith, after drivers raised unpaid wait time as their top complaint in the Q3 carrier survey.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:21:22.735Z",
+  "updated": "2026-10-20T21:21:22.797Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/KAN-13",
+  "metadata": {
+    "key": "KAN-13",
+    "issueType": "Story",
+    "status": "To Do",
+    "priority": "Medium",
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "My Software Team",
+    "parent": null,
+    "due": null
+  }
+}

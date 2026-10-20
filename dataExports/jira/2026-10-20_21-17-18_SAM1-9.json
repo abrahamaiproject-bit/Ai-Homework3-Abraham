@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "SAM1-9",
+  "title": "Optimize Performance of the Application",
+  "body": "Optimizing the performance of the application is crucial for user satisfaction. This task involves:\n\n* Analyzing current performance metrics.\n* Identifying bottlenecks in the code.\n* Implementing performance improvements.\n\nThe goal is to ensure that the application runs smoothly, even under heavy load.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:17:18.819Z",
+  "updated": "2026-10-20T21:17:19.431Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/SAM1-9",
+  "metadata": {
+    "key": "SAM1-9",
+    "issueType": "Task",
+    "status": "To Do",
+    "priority": null,
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "(Example) Billing System Dev",
+    "parent": "SAM1-2",
+    "due": "2026-10-31"
+  }
+}

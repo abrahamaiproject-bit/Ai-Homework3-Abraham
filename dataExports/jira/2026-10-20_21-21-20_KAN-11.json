@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "KAN-11",
+  "title": "Prepare Project Atlas beta launch with 5 pilot shippers",
+  "body": "Coordinate the closed beta of **Project Atlas** with five pilot shippers before general availability.\n\n**Checklist**\n\n* Confirm pilot shipper list and contacts with Joe Smith (account management)\n* Enable the Atlas feature flag for pilot accounts only\n* Schedule 30-minute onboarding calls with each pilot shipper\n* Set up a shared feedback channel and a weekly check-in\n* Define success metrics: weekly active users, reduction in \"where's my truck\" calls, ETA accuracy\n\n**Target beta start:** two weeks after the tracking map and ETA model reach staging.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:21:20.506Z",
+  "updated": "2026-10-20T21:21:20.567Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/KAN-11",
+  "metadata": {
+    "key": "KAN-11",
+    "issueType": "Task",
+    "status": "To Do",
+    "priority": "Medium",
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "My Software Team",
+    "parent": null,
+    "due": null
+  }
+}

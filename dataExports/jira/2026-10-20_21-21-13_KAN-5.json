@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "KAN-5",
+  "title": "Build ELD telematics ingestion pipeline for carrier GPS pings",
+  "body": "Set up a pipeline that pulls GPS location pings from our partner carriers' ELD providers (Samsara, Motive) and writes them to the tracking database. This is the data backbone for **Project Atlas**.\n\n**Scope**\n\n* Webhook receivers for Samsara and Motive location events\n* Normalize payloads into a common `location_ping` schema (load_id, lat, lng, speed, timestamp)\n* Deduplicate pings and drop anything older than 24h\n* Alert on ingestion lag over 5 minutes\n\n**Definition of done**\n\n* Pings from at least 3 pilot carriers visible in staging\n* Runbook added to the on-call wiki\n\n",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:21:13.960Z",
+  "updated": "2026-10-20T21:21:14.028Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/KAN-5",
+  "metadata": {
+    "key": "KAN-5",
+    "issueType": "Task",
+    "status": "To Do",
+    "priority": "Medium",
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "My Software Team",
+    "parent": null,
+    "due": null
+  }
+}

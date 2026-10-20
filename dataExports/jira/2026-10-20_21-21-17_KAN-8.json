@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "KAN-8",
+  "title": "ETA prediction model v1 for Project Atlas",
+  "body": "Replace the current straight-line ETA calculation with a model that accounts for traffic, hours-of-service limits and historical lane performance. Accurate ETAs are a core promise of **Project Atlas**.\n\n**Scope**\n\n* Train a baseline gradient-boosted model on 12 months of completed loads\n* Features: lane, distance, time of day, day of week, carrier history, remaining HOS\n* Serve predictions through an internal `/eta` endpoint\n* Target: median absolute error under 45 minutes on loads over 300 miles\n\n**Review:** Joe Smith will review the model's results with the dispatch team before rollout.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:21:17.150Z",
+  "updated": "2026-10-20T21:21:17.227Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/KAN-8",
+  "metadata": {
+    "key": "KAN-8",
+    "issueType": "Task",
+    "status": "To Do",
+    "priority": "Medium",
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "My Software Team",
+    "parent": null,
+    "due": null
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "SAM1-1",
+  "title": "Implement User Authentication",
+  "body": "The **User Authentication** feature is crucial for ensuring that users can securely access their accounts. This task involves:\n\n* Designing the login interface.\n* Implementing secure password storage.\n* Setting up two-factor authentication.\n\nThe goal is to provide a seamless experience while maintaining high security standards. Ensure that the authentication process is user-friendly and efficient.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:17:12.756Z",
+  "updated": "2026-10-20T21:17:13.278Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/SAM1-1",
+  "metadata": {
+    "key": "SAM1-1",
+    "issueType": "Epic",
+    "status": "To Do",
+    "priority": null,
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "(Example) Billing System Dev",
+    "parent": null,
+    "due": "2026-11-15"
+  }
+}

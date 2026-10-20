@@ -1,23 +1,23 @@
 ---
 name: export-service-data
-description: Download items from Gmail (claude.ai Gmail connector), GitHub, Notion, Linear and Todoist into dataExports/<service>/ as one JSON file per item, following localStorageFormats.md, skipping items already downloaded. Use when asked to export, download, sync or refresh data from any of these services.
+description: Download items from Gmail (claude.ai Gmail connector), GitHub, Notion, Linear, Todoist and Jira into dataExports/<service>/ as one JSON file per item, following localStorageFormats.md, skipping items already downloaded. Use when asked to export, download, sync or refresh data from any of these services.
 ---
 
 # Export service data
 
-Download items from Gmail, GitHub, Notion, Linear and Todoist and store them in `dataExports/` **exactly** as specified in `localStorageFormats.md` at the project root. Read that file first; it is the source of truth for folder layout, file naming, short-id rules, field order, metadata keys and which fields may be null or approximate. If this skill and that file ever disagree, follow `localStorageFormats.md`.
+Download items from Gmail, GitHub, Notion, Linear, Todoist and Jira and store them in `dataExports/` **exactly** as specified in `localStorageFormats.md` at the project root. Read that file first; it is the source of truth for folder layout, file naming, short-id rules, field order, metadata keys and which fields may be null or approximate. If this skill and that file ever disagree, follow `localStorageFormats.md`.
 
 ## Inputs
 
-- Which services (default: all five) and how many items per service (default: at least 5).
-- Optional filters the user gives (e.g. a Gmail search query, a repo owner, a Notion keyword, a Linear team, a Todoist project).
+- Which services (default: all six) and how many items per service (default: at least 5).
+- Optional filters the user gives (e.g. a Gmail search query, a repo owner, a Notion keyword, a Linear team, a Todoist project, a Jira project key).
 
 ## Step 1 — Find what is already downloaded
 
 Before calling any service, build the set of ids already on disk for each service:
 
 ```bash
-for s in gmail github notion linear todoist; do
+for s in gmail github notion linear todoist jira; do
   echo "== $s"; for f in dataExports/$s/*.json; do [ -e "$f" ] && python3 -I -c "import json,sys;print(json.load(open(sys.argv[1]))['id'])" "$f"; done
 done
 ```
@@ -56,6 +56,11 @@ Use the `mcp__claude_ai_Gmail__*` tools, never another Gmail integration.
 2. `mcp__todoist__find-projects` to list projects (id → name); `mcp__todoist__find-sections` per project for section names.
 3. `mcp__todoist__find-tasks` per project (`projectId`, including `"inbox"`) with `responsibleUserFiltering: "all"` and `limit: 100`, paging with `cursor`. Include completed tasks with `mcp__todoist__find-completed-tasks` only if the user asks for them.
 4. Map: `id` = task id, `title` = task content, `body` = description (`""` if none), `author` = creator name, `created` = `addedAt`, `updated` = `updatedAt` (or `addedAt` if absent), `url` = `https://app.todoist.com/app/task/<id>`, metadata `project`, `section`, `priority` (`p1`–`p4`), `labels`, `due`, `recurring`, `deadline`, `completed`, `parentId`, `assignee`.
+
+### Jira — Atlassian MCP
+1. `mcp__atlassian__getAccessibleAtlassianResources` once for the `cloudId`.
+2. `mcp__atlassian__searchJiraIssuesUsingJql` with a bounded JQL (unbounded queries are rejected), e.g. `created >= "2000-01-01" ORDER BY created ASC` or `project = KAN ORDER BY created ASC`, `maxResults: 100`, `responseContentFormat: "markdown"`, `fields: ["summary","description","status","issuetype","priority","labels","assignee","reporter","creator","created","updated","project","parent","duedate"]`, paging with `nextPageToken`. Large results are saved to a file; read it with `jq`/Python instead of in-context.
+3. Map: `id` = issue `key` (e.g. `KAN-4`), `title` = `summary`, `body` = `description` Markdown string (`""` when Jira returns an empty ADF document object instead of a string), `author` = `creator.displayName`, `created` / `updated` = `created` / `updated` **converted to UTC** (`YYYY-MM-DDTHH:MM:SS.mmmZ`), `url` = `webUrl`, metadata `key`, `issueType` (= `issuetype.name`), `status` (= `status.name`), `priority` (= `priority.name` or null), `assignee` / `reporter` (display names or null), `labels`, `project` (= `project.name`), `parent` (= `parent.key` or null), `due` (= `duedate`).
 
 ## Step 3 — Write the files
 

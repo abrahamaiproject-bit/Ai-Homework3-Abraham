@@ -1,6 +1,6 @@
 # Local storage format: `dataExports/`
 
-This document defines how data downloaded from Gmail, GitHub, Notion, Linear and Todoist is stored locally. Every exporter (human or Claude) must follow it exactly.
+This document defines how data downloaded from Gmail, GitHub, Notion, Linear, Todoist and Jira is stored locally. Every exporter (human or Claude) must follow it exactly.
 
 ## Folder structure
 
@@ -10,7 +10,8 @@ dataExports/
 ├── github/   # one file per repository
 ├── notion/   # one file per page
 ├── linear/   # one file per issue
-└── todoist/  # one file per task
+├── todoist/  # one file per task
+└── jira/     # one file per issue
 ```
 
 One sub-folder per service, named in lowercase. Nothing else goes inside the service folders except `.gitkeep`.
@@ -31,6 +32,7 @@ One sub-folder per service, named in lowercase. Nothing else goes inside the ser
 | notion | page id without dashes: first 8 + last 4 hex characters | `2026-10-15_22-49-00_3fa6f755ec5f.json` |
 | linear | issue identifier | `2026-10-15_22-49-40_ABR-12.json` |
 | todoist | full task id | `2026-10-20_21-05-12_6hpfC2vRw9xJqQ8m.json` |
+| jira | issue key | `2026-10-20_21-21-12_KAN-4.json` |
 
 Files are UTF-8 JSON, pretty-printed with 2-space indent, non-ASCII characters kept as-is (not `\u` escaped), ending with a newline.
 
@@ -40,11 +42,11 @@ Every file is one JSON object with these top-level fields, in this order:
 
 | Field | Type | Meaning |
 |---|---|---|
-| `service` | string | `gmail`, `github`, `notion`, `linear` or `todoist` |
-| `id` | string | The service's own full id (Gmail message id, GitHub numeric repo id as a string, Notion page UUID with dashes, Linear identifier, Todoist task id) |
-| `title` | string | Email subject, `owner/repo`, page title (without emoji icon), issue title, or task content |
-| `body` | string | Full text: email plain-text body, README text, page content as Notion Markdown, issue description, or task description. Never truncated. |
-| `author` | string | Sender address, repo owner login, page creator name, issue creator name, or task creator name |
+| `service` | string | `gmail`, `github`, `notion`, `linear`, `todoist` or `jira` |
+| `id` | string | The service's own full id (Gmail message id, GitHub numeric repo id as a string, Notion page UUID with dashes, Linear identifier, Todoist task id, Jira issue key) |
+| `title` | string | Email subject, `owner/repo`, page title (without emoji icon), issue title, task content, or Jira issue summary |
+| `body` | string | Full text: email plain-text body, README text, page content as Notion Markdown, issue description, task description, or Jira issue description as Markdown. Never truncated. |
+| `author` | string | Sender address, repo owner login, page creator name, issue creator name, task creator name, or Jira issue creator name |
 | `created` | string | ISO 8601 UTC timestamp, as returned by the service |
 | `updated` | string | ISO 8601 UTC timestamp of last change |
 | `url` | string | Link to the item in the service's web UI |
@@ -103,6 +105,20 @@ Every file is one JSON object with these top-level fields, in this order:
 | `parentId` | string \| null | Parent task id for subtasks |
 | `assignee` | string \| null | Responsible user's name |
 
+### jira
+| Key | Type | Notes |
+|---|---|---|
+| `key` | string | Issue key, e.g. `KAN-4` |
+| `issueType` | string | e.g. `Epic`, `Story`, `Task`, `Subtask` |
+| `status` | string | Workflow status name, e.g. `To Do`, `In Progress`, `In Review`, `Done` |
+| `priority` | string \| null | e.g. `Highest`, `High`, `Medium`, `Low`, `Lowest` |
+| `assignee` | string \| null | Assignee display name |
+| `reporter` | string \| null | Reporter display name |
+| `labels` | string[] | Label names (empty array if none) |
+| `project` | string | Project name, e.g. `My Software Team` |
+| `parent` | string \| null | Parent issue key (epic for tasks, parent task for subtasks) |
+| `due` | string \| null | Due date (`YYYY-MM-DD`) |
+
 ## Nullable and approximate fields
 
 | Field | Service | Why |
@@ -128,6 +144,10 @@ Every file is one JSON object with these top-level fields, in this order:
 | `author` = connected user | todoist | The Todoist MCP tools do not return the creator; in an unshared project the only possible creator is the connected user (`user-info` `fullName`). |
 | `metadata.section` / `due` / `deadline` / `parentId` / `assignee` = `null` | todoist | Task has no section, due date, deadline, parent task or assignee. |
 | `parent` = database / page | notion | Rows of the "Todo List" database record `{ "type": "database", "name", "id" }`; nested sub-pages record their direct parent page. |
+| `created` / `updated` converted to UTC | jira | Jira returns timestamps with the site's offset (e.g. `2026-10-20T17:21:12.626-0400`); they are stored converted to UTC with millisecond precision (`2026-10-20T21:21:12.626Z`). |
+| `body` = `""` | jira | Issue has no description (Jira returns an empty ADF document). |
+| `metadata.priority` = `null` | jira | Issue has no priority set (e.g. issues created from a project template). |
+| `metadata.assignee` / `parent` / `due` = `null` | jira | Issue is unassigned, has no parent, or has no due date. Some subtasks (e.g. `KAN-3`) are returned without a parent by the Jira API. |
 
 ## Examples
 
@@ -241,6 +261,32 @@ Illustrative only: the Todoist account had no tasks at the time this format was 
     "completed": false,
     "parentId": null,
     "assignee": null
+  }
+}
+```
+
+### jira — `dataExports/jira/2026-10-20_21-21-12_KAN-4.json`
+```json
+{
+  "service": "jira",
+  "id": "KAN-4",
+  "title": "Real-time shipment tracking map for shippers (Project Atlas)",
+  "body": "As a shipper using the Lumen Freight portal, I want to see my in-transit loads on a live map so I can give my customers accurate ETAs without calling dispatch.\n\nThis is the headline feature of **Project Atlas**, …",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:21:12.626Z",
+  "updated": "2026-10-20T21:21:12.724Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/KAN-4",
+  "metadata": {
+    "key": "KAN-4",
+    "issueType": "Story",
+    "status": "To Do",
+    "priority": "Medium",
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "My Software Team",
+    "parent": null,
+    "due": null
   }
 }
 ```

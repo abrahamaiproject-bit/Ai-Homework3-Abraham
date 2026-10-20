@@ -1,0 +1,22 @@
+{
+  "service": "jira",
+  "id": "SAM1-5",
+  "title": "Post-Launch Review and Feedback Collection",
+  "body": "After the launch, it's essential to gather feedback from users. This task includes:\n\n* Analyzing user feedback.\n* Identifying areas for improvement.\n* Planning for future updates.\n\nThe goal is to ensure that the platform continues to meet user needs after launch.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:17:15.402Z",
+  "updated": "2026-10-20T21:17:15.863Z",
+  "url": "https://abrahamaiproject.atlassian.net/browse/SAM1-5",
+  "metadata": {
+    "key": "SAM1-5",
+    "issueType": "Epic",
+    "status": "Done",
+    "priority": null,
+    "assignee": null,
+    "reporter": "Abraham AIProject",
+    "labels": [],
+    "project": "(Example) Billing System Dev",
+    "parent": null,
+    "due": "2026-11-14"
+  }
+}
