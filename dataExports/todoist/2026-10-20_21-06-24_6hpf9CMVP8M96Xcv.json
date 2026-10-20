@@ -1,0 +1,22 @@
+{
+  "service": "todoist",
+  "id": "6hpf9CMVP8M96Xcv",
+  "title": "Review data processing agreement with Harbor Logistics",
+  "body": "Legal review of the DPA covering driver location data retention (proposed 90 days) before the Lumen Freight pilot begins.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:06:24.637Z",
+  "updated": "2026-10-20T21:06:24.637Z",
+  "url": "https://app.todoist.com/app/task/6hpf9CMVP8M96Xcv",
+  "metadata": {
+    "project": "Project Atlas",
+    "section": null,
+    "priority": "p2",
+    "labels": [],
+    "due": "2026-10-28",
+    "recurring": false,
+    "deadline": null,
+    "completed": false,
+    "parentId": null,
+    "assignee": null
+  }
+}

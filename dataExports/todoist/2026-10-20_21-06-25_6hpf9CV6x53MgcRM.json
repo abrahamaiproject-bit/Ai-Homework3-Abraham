@@ -1,0 +1,22 @@
+{
+  "service": "todoist",
+  "id": "6hpf9CV6x53MgcRM",
+  "title": "Prepare Project Atlas update for investors",
+  "body": "Two-slide summary for the Lumen Freight monthly investor update: pilot readiness, engineering milestones, and Q1 launch timeline.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:06:25.027Z",
+  "updated": "2026-10-20T21:06:25.027Z",
+  "url": "https://app.todoist.com/app/task/6hpf9CV6x53MgcRM",
+  "metadata": {
+    "project": "Project Atlas",
+    "section": null,
+    "priority": "p3",
+    "labels": [],
+    "due": "2026-11-05",
+    "recurring": false,
+    "deadline": null,
+    "completed": false,
+    "parentId": null,
+    "assignee": null
+  }
+}

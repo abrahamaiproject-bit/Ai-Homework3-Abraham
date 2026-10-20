@@ -1,0 +1,22 @@
+{
+  "service": "todoist",
+  "id": "6hpf9CG8HHjwM93v",
+  "title": "Define pilot success metrics dashboard",
+  "body": "Build the internal Project Atlas dashboard tracking miles driven (target: 8% reduction) and on-time delivery (target: 95%) against the pre-pilot baseline.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:06:23.424Z",
+  "updated": "2026-10-20T21:06:23.424Z",
+  "url": "https://app.todoist.com/app/task/6hpf9CG8HHjwM93v",
+  "metadata": {
+    "project": "Project Atlas",
+    "section": null,
+    "priority": "p2",
+    "labels": [],
+    "due": "2026-10-30",
+    "recurring": false,
+    "deadline": null,
+    "completed": false,
+    "parentId": null,
+    "assignee": null
+  }
+}

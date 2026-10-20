@@ -1,0 +1,22 @@
+{
+  "service": "todoist",
+  "id": "6hpf9CJm3cGwqJ4v",
+  "title": "Draft driver onboarding guide for the mobile app",
+  "body": "One-page guide for Harbor Logistics drivers covering login, viewing the day's route, and reporting a delivery exception. Translate into Spanish as well.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:06:24.218Z",
+  "updated": "2026-10-20T21:06:24.218Z",
+  "url": "https://app.todoist.com/app/task/6hpf9CJm3cGwqJ4v",
+  "metadata": {
+    "project": "Project Atlas",
+    "section": null,
+    "priority": "p3",
+    "labels": [],
+    "due": "2026-10-30",
+    "recurring": false,
+    "deadline": null,
+    "completed": false,
+    "parentId": null,
+    "assignee": null
+  }
+}

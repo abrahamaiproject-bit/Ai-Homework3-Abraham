@@ -14,7 +14,7 @@ from pathlib import Path
 
 DASHBOARD_DIR = Path(__file__).resolve().parent
 DATA_DIR = DASHBOARD_DIR.parent / "dataExports"
-SERVICES = ["gmail", "github", "notion", "linear"]
+SERVICES = ["gmail", "github", "notion", "linear", "todoist"]
 
 
 def load_items():

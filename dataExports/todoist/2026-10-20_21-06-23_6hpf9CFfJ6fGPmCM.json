@@ -1,0 +1,22 @@
+{
+  "service": "todoist",
+  "id": "6hpf9CFfJ6fGPmCM",
+  "title": "Install telematics devices on pilot trucks",
+  "body": "Coordinate with Harbor Logistics fleet managers to install GPS/telematics units on all 45 pilot trucks. Verify each unit is reporting into the telemetry pipeline before go-live.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:06:23.112Z",
+  "updated": "2026-10-20T21:06:23.112Z",
+  "url": "https://app.todoist.com/app/task/6hpf9CFfJ6fGPmCM",
+  "metadata": {
+    "project": "Project Atlas",
+    "section": null,
+    "priority": "p1",
+    "labels": [],
+    "due": "2026-10-31",
+    "recurring": false,
+    "deadline": null,
+    "completed": false,
+    "parentId": null,
+    "assignee": null
+  }
+}

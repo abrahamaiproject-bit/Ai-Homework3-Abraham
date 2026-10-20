@@ -1,6 +1,6 @@
 # Local storage format: `dataExports/`
 
-This document defines how data downloaded from Gmail, GitHub, Notion and Linear is stored locally. Every exporter (human or Claude) must follow it exactly.
+This document defines how data downloaded from Gmail, GitHub, Notion, Linear and Todoist is stored locally. Every exporter (human or Claude) must follow it exactly.
 
 ## Folder structure
 
@@ -9,7 +9,8 @@ dataExports/
 ├── gmail/    # one file per email message
 ├── github/   # one file per repository
 ├── notion/   # one file per page
-└── linear/   # one file per issue
+├── linear/   # one file per issue
+└── todoist/  # one file per task
 ```
 
 One sub-folder per service, named in lowercase. Nothing else goes inside the service folders except `.gitkeep`.
@@ -29,6 +30,7 @@ One sub-folder per service, named in lowercase. Nothing else goes inside the ser
 | github | repository name (without owner) | `2026-10-15_22-47-59_atlas-api-gateway.json` |
 | notion | page id without dashes: first 8 + last 4 hex characters | `2026-10-15_22-49-00_3fa6f755ec5f.json` |
 | linear | issue identifier | `2026-10-15_22-49-40_ABR-12.json` |
+| todoist | full task id | `2026-10-20_21-05-12_6hpfC2vRw9xJqQ8m.json` |
 
 Files are UTF-8 JSON, pretty-printed with 2-space indent, non-ASCII characters kept as-is (not `\u` escaped), ending with a newline.
 
@@ -38,11 +40,11 @@ Every file is one JSON object with these top-level fields, in this order:
 
 | Field | Type | Meaning |
 |---|---|---|
-| `service` | string | `gmail`, `github`, `notion` or `linear` |
-| `id` | string | The service's own full id (Gmail message id, GitHub numeric repo id as a string, Notion page UUID with dashes, Linear identifier) |
-| `title` | string | Email subject, `owner/repo`, page title (without emoji icon), or issue title |
-| `body` | string | Full text: email plain-text body, README text, page content as Notion Markdown, or issue description. Never truncated. |
-| `author` | string | Sender address, repo owner login, page creator name, or issue creator name |
+| `service` | string | `gmail`, `github`, `notion`, `linear` or `todoist` |
+| `id` | string | The service's own full id (Gmail message id, GitHub numeric repo id as a string, Notion page UUID with dashes, Linear identifier, Todoist task id) |
+| `title` | string | Email subject, `owner/repo`, page title (without emoji icon), issue title, or task content |
+| `body` | string | Full text: email plain-text body, README text, page content as Notion Markdown, issue description, or task description. Never truncated. |
+| `author` | string | Sender address, repo owner login, page creator name, issue creator name, or task creator name |
 | `created` | string | ISO 8601 UTC timestamp, as returned by the service |
 | `updated` | string | ISO 8601 UTC timestamp of last change |
 | `url` | string | Link to the item in the service's web UI |
@@ -87,6 +89,20 @@ Every file is one JSON object with these top-level fields, in this order:
 | `team` | string | Team name |
 | `project` | string \| null | Project name |
 
+### todoist
+| Key | Type | Notes |
+|---|---|---|
+| `project` | string | Project name, e.g. `Inbox` or `Project Atlas` |
+| `section` | string \| null | Section name |
+| `priority` | string | `p1` (highest) to `p4` (none), as shown in the Todoist apps |
+| `labels` | string[] | Label names (empty array if none) |
+| `due` | string \| null | Due date or datetime as returned by the service (`YYYY-MM-DD` or ISO 8601) |
+| `recurring` | boolean | Whether the due date repeats |
+| `deadline` | string \| null | Deadline date (`YYYY-MM-DD`) |
+| `completed` | boolean | Whether the task is completed |
+| `parentId` | string \| null | Parent task id for subtasks |
+| `assignee` | string \| null | Responsible user's name |
+
 ## Nullable and approximate fields
 
 | Field | Service | Why |
@@ -107,6 +123,10 @@ Every file is one JSON object with these top-level fields, in this order:
 | `metadata.readme` = `null`, `body` = `""` | github | Repo has no `README.md`. |
 | `body` = `""` | notion | Page is blank (the fetch tool returns `<blank-page>`). |
 | `metadata.icon` = `null` | notion | Page has no icon, or has a built-in Notion icon (e.g. `icons/checklist_green`) instead of an emoji. |
+| `body` = `""` | todoist | Task has no description. |
+| `updated` = `created` | todoist | The Todoist MCP tools do not return `updatedAt`, so `addedAt` is used. |
+| `author` = connected user | todoist | The Todoist MCP tools do not return the creator; in an unshared project the only possible creator is the connected user (`user-info` `fullName`). |
+| `metadata.section` / `due` / `deadline` / `parentId` / `assignee` = `null` | todoist | Task has no section, due date, deadline, parent task or assignee. |
 | `parent` = database / page | notion | Rows of the "Todo List" database record `{ "type": "database", "name", "id" }`; nested sub-pages record their direct parent page. |
 
 ## Examples
@@ -194,6 +214,33 @@ Long `body` and `readme` values are shortened with `…` here only; real files c
     "labels": [],
     "team": "Abraham Gabay",
     "project": null
+  }
+}
+```
+
+### todoist — `dataExports/todoist/2026-10-20_21-05-12_6hpfC2vRw9xJqQ8m.json`
+Illustrative only: the Todoist account had no tasks at the time this format was added, so the values below are not from a real export.
+```json
+{
+  "service": "todoist",
+  "id": "6hpfC2vRw9xJqQ8m",
+  "title": "Send Harbor Logistics pilot schedule",
+  "body": "Confirm the November 3 start date for the Newark and Philadelphia depots.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:05:12.000000Z",
+  "updated": "2026-10-20T21:05:12.000000Z",
+  "url": "https://app.todoist.com/app/task/6hpfC2vRw9xJqQ8m",
+  "metadata": {
+    "project": "Project Atlas",
+    "section": null,
+    "priority": "p2",
+    "labels": ["pilot"],
+    "due": "2026-10-24",
+    "recurring": false,
+    "deadline": null,
+    "completed": false,
+    "parentId": null,
+    "assignee": null
   }
 }
 ```

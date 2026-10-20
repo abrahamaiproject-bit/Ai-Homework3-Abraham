@@ -1,0 +1,22 @@
+{
+  "service": "todoist",
+  "id": "6hpf9CF95rQ8gjMv",
+  "title": "Load-test the route planner with 500 stops",
+  "body": "Run the planner against a synthetic day of 500 stops across both depots and record solve time. Target is under 30 seconds per depot; share results with Joe Smith.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:06:23.900Z",
+  "updated": "2026-10-20T21:06:23.900Z",
+  "url": "https://app.todoist.com/app/task/6hpf9CF95rQ8gjMv",
+  "metadata": {
+    "project": "Project Atlas",
+    "section": null,
+    "priority": "p2",
+    "labels": [],
+    "due": "2026-10-29",
+    "recurring": false,
+    "deadline": null,
+    "completed": false,
+    "parentId": null,
+    "assignee": null
+  }
+}

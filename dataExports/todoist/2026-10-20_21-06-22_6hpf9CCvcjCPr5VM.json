@@ -1,0 +1,22 @@
+{
+  "service": "todoist",
+  "id": "6hpf9CCvcjCPr5VM",
+  "title": "Finalize Project Atlas backend architecture doc",
+  "body": "Write up the service boundaries for the route-optimization engine (planner, telemetry ingest, API gateway) and circulate to the team. Joe Smith owns the backend architecture and needs to sign off before sprint planning.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:06:22.165Z",
+  "updated": "2026-10-20T21:06:22.165Z",
+  "url": "https://app.todoist.com/app/task/6hpf9CCvcjCPr5VM",
+  "metadata": {
+    "project": "Project Atlas",
+    "section": null,
+    "priority": "p1",
+    "labels": [],
+    "due": "2026-10-23",
+    "recurring": false,
+    "deadline": null,
+    "completed": false,
+    "parentId": null,
+    "assignee": null
+  }
+}

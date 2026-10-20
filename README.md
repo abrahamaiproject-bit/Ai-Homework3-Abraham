@@ -57,7 +57,8 @@ services at once, filter by service, and click any result to see the full item. 
 | File | What it is |
 |---|---|
 | [`Homework3_Presentation.pptx`](Homework3_Presentation.pptx) | Slide deck presenting the project |
-| [`demo_video.mp4`](demo_video.mp4) | Screen recording demonstrating the project |
+| [`videos/demo_video.mp4`](videos/demo_video.mp4) | Demo video: logging into Linear, downloading data with Claude Code, searching the dashboard |
+| [`screenshots/`](screenshots/) | Original content and the same content in the dashboard for each service, plus the MCP connections and a cross-service search |
 
 ## Data and privacy
 

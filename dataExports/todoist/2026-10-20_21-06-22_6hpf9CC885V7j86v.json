@@ -1,0 +1,22 @@
+{
+  "service": "todoist",
+  "id": "6hpf9CC885V7j86v",
+  "title": "Confirm Harbor Logistics pilot start date",
+  "body": "Email Harbor Logistics ops to confirm the November 3 start for the 45 trucks at the Newark and Philadelphia depots. Get the depot contact names for day-one support.",
+  "author": "Abraham AIProject",
+  "created": "2026-10-20T21:06:22.472Z",
+  "updated": "2026-10-20T21:06:22.472Z",
+  "url": "https://app.todoist.com/app/task/6hpf9CC885V7j86v",
+  "metadata": {
+    "project": "Project Atlas",
+    "section": null,
+    "priority": "p1",
+    "labels": [],
+    "due": "2026-10-22",
+    "recurring": false,
+    "deadline": null,
+    "completed": false,
+    "parentId": null,
+    "assignee": null
+  }
+}

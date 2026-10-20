@@ -14,6 +14,10 @@
     "linear": {
       "type": "http",
       "url": "https://mcp.linear.app/mcp"
+    },
+    "todoist": {
+      "type": "http",
+      "url": "https://ai.todoist.net/mcp"
     }
   }
 }
